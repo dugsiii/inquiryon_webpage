@@ -15,9 +15,9 @@ export default function Hero() {
         </h1>
         <p>
           Turn vague prompts into precise answers by
-          <b> asking smart questions</b> to clarify user intent, so your LLM
-          delivers the best response to your customers, every time.{" "}
-          <b>Secure your spot* </b>to get early access.
+          <b> asking smart questions.</b> This clarifies user intent, so your
+          LLM delivers the best response to your customers, every time.{" "}
+          <b>Secure your spot* </b>to get early access!
         </p>
         <div className="flex flex-col gap-1">
           <div className="flex flex-col sm:flex-row gap-2 max-w-md">

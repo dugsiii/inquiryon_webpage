@@ -2,15 +2,13 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { scrollToEmail } from "@/lib/utils";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 30;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
+      setScrolled(window.scrollY > 30);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -23,9 +21,19 @@ export default function Navbar() {
         scrolled ? "bg-primary text-secondary" : true
       }`}
     >
-      <div className="flex flex-row justify-between items-center py-2 px-4 lg:px-8">
-        <a className="text-3xl font-sans-logo">Inquiryon</a>
-        <div className="hidden lg:flex flex-row gap-8 text-lg font-semibold font-sans-header ">
+      <div className="flex flex-row justify-between items-center py-2 px-4 md:px-10 lg:px-15">
+        <a className="flex flex-row items-center" href="#">
+          <Image
+            src="/logo.png"
+            alt="Inquiryon Logo. Sparkle!"
+            width={40}
+            height={40}
+          />
+          <h6 className="text-3xl pt-[4px] font-sans-logo hover:text-accent">
+            Inquiryon
+          </h6>
+        </a>
+        <div className="hidden lg:flex flex-row gap-10 text-lg font-semibold font-sans-header ">
           {[
             { name: "Home", href: "#" },
             { name: "Features", href: "#features" },

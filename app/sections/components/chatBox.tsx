@@ -16,7 +16,7 @@ function Bubble({
         isWhite ? "bg-secondary" : "bg-accent"
       }`}
     >
-      <p>{children}</p>
+      {children}
       {isLast && (
         <div
           className={`absolute w-0 h-0 -bottom-3 ${
@@ -61,12 +61,10 @@ export default function ChatBox({ stage }: { stage: number }) {
   const bubbles = bubbleText[stage] ?? [];
 
   return (
-    <div className="h-full w-xl py-12 px-8 flex flex-col rounded-lg gap-6 bg-gray-500">
+    <div className="h-full w-xl py-12 px-8 flex flex-col rounded-lg gap-6 bg-dark-grey">
       {bubbles.map((cluster, index) => (
         <BubbleCluster key={index} leftAligned={index % 2 !== 0}>
-          {cluster.map((text, i) => (
-            <p key={i}>{text}</p>
-          ))}
+          {React.Children.toArray(cluster)}
         </BubbleCluster>
       ))}
     </div>

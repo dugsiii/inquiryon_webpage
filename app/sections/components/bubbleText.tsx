@@ -1,5 +1,5 @@
+/* eslint-disable react/jsx-key */
 import React from "react";
-import { BubbleCluster } from "./chatBox";
 
 export const bubbleText: React.ReactNode[][][] = [
   //   Stage 3 Bubble text

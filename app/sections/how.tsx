@@ -1,32 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import Bubble from "./components/chatBox";
 import Section from "@/components/section";
 import ChatBox from "./components/chatBox";
-
-function StepBlock({
-  title,
-  text,
-  selected = false,
-  stage,
-}: {
-  title: string;
-  text: string;
-  selected?: boolean;
-  stage: number;
-}) {
-  return (
-    <div
-      className={`flex flex-col p-6 transition-all duration-200 ${
-        selected ? "text-accent scale-[1.02]" : ""
-      }`}
-    >
-      <p className="text-sm">Stage {stage}:</p>
-      <h4>{title}</h4>
-      <p className="max-w-60">{text}</p>
-    </div>
-  );
-}
 
 export default function How() {
   const [selectedStage, setSelectedStage] = useState(0);
@@ -95,6 +70,7 @@ export default function How() {
                       : "opacity-70"
                   }`}
                   onClick={() => setSelectedStage(i)}
+                  key={i}
                 >
                   <p className="text-sm">Stage {i + 1}:</p>
                   <h4>{step.title}</h4>

@@ -1,11 +1,74 @@
-function Bubble() {
-  return <div className="h-full w-120 p-4 rounded-lg bg-accent">bubblB</div>;
+import React from "react";
+import { bubbleText } from "./bubbleText";
+
+function Bubble({
+  children,
+  isWhite = true,
+  isLast = false,
+}: {
+  children: React.ReactNode;
+  isWhite?: boolean;
+  isLast?: boolean;
+}) {
+  return (
+    <div
+      className={`relative h-full w-fit max-w-sm px-4 py-2 rounded-lg text-primary ${
+        isWhite ? "bg-secondary" : "bg-accent"
+      }`}
+    >
+      <p>{children}</p>
+      {isLast && (
+        <div
+          className={`absolute w-0 h-0 -bottom-3 ${
+            isWhite
+              ? "left-3 border-t-[15px] border-t-secondary border-r-[15px] border-r-transparent"
+              : "right-3 border-t-[15px] border-t-accent border-l-[15px] border-l-transparent"
+          }`}
+        />
+      )}
+    </div>
+  );
 }
 
-export default function ChatBox() {
+export function BubbleCluster({
+  children,
+  leftAligned = true,
+}: {
+  children: React.ReactNode;
+  leftAligned?: boolean;
+}) {
   return (
-    <div className="h-full w-120 p-4 rounded-lg bg-mid-grey">
-      <Bubble />
+    <div
+      className={`flex flex-col gap-1 ${
+        leftAligned ? "items-start" : "items-end"
+      }`}
+    >
+      {React.Children.map(children, (bubbleText, index) => {
+        const isLast = index === React.Children.count(children) - 1;
+        return (
+          <div key={index}>
+            <Bubble isWhite={leftAligned} isLast={isLast}>
+              {bubbleText}
+            </Bubble>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+export default function ChatBox({ stage }: { stage: number }) {
+  const bubbles = bubbleText[stage] ?? [];
+
+  return (
+    <div className="h-full w-xl py-12 px-8 flex flex-col rounded-lg gap-6 bg-gray-500">
+      {bubbles.map((cluster, index) => (
+        <BubbleCluster key={index} leftAligned={index % 2 !== 0}>
+          {cluster.map((text, i) => (
+            <p key={i}>{text}</p>
+          ))}
+        </BubbleCluster>
+      ))}
     </div>
   );
 }

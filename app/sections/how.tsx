@@ -84,8 +84,8 @@ export default function How() {
             </div>
           </div>
 
-          <div className="flex flex-row gap-30">
-            <ChatBox />
+          <div className="flex flex-row gap-8">
+            <ChatBox stage={selectedStage} />
             <div className="flex flex-col max-w-xs">
               {stepsText.map((step, i) => (
                 <a

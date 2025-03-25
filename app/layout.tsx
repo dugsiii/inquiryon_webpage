@@ -35,7 +35,7 @@ export default function RootLayout({
         className={`${mulish.variable} ${rajdhani.variable} ${chivo.variable} antialiased`}
       >
         <Navbar />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>
+        <div>{children}</div>
       </body>
     </html>
   );

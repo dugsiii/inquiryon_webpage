@@ -62,7 +62,7 @@ export default function ChatBox({ stage }: { stage: number }) {
   const bubbles = bubbleText[stage] ?? [];
 
   return (
-    <div className="h-full w-xl py-12 px-8 flex flex-col rounded-lg gap-6 bg-dark-grey transition-all">
+    <div className="flex-1 w-xl py-12 px-8 flex flex-col rounded-lg gap-6 bg-dark-grey transition-all">
       <AnimatePresence mode="wait">
         {bubbles.map((cluster, index) => (
           <motion.div

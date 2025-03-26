@@ -31,18 +31,18 @@ export default function How() {
           <h2>How Does it Work?</h2>
           <div className="flex flex-col items-center gap-4">
             <h6>Select a Stage:</h6>
-            <div className="flex flex-row px-8 items-center gap-16">
+            <div className="flex flex-row px-8 items-center gap-16 ">
               {stepsText.map((step, i) => (
                 <a
                   key={i}
                   onClick={() => setSelectedStage(i)}
-                  className={`cursor-pointer flex flex-row gap-4 items-center`}
+                  className={`cursor-pointer flex flex-row gap-4 items-center group`}
                 >
                   <div
                     className={`w-8 h-8 rounded-xs rotate-45 flex justify-center transition-all items-center ${
                       selectedStage === i
                         ? "bg-accent"
-                        : "bg-secondary opacity-70"
+                        : "bg-mid-grey group-hover:bg-secondary"
                     }`}
                   >
                     <div className="-rotate-45 text-center text-xl font-sans-header text-primary">
@@ -53,7 +53,7 @@ export default function How() {
                     className={`text-2xl transition-all ${
                       selectedStage === i
                         ? "text-accent underline"
-                        : "text-secondary opacity-70"
+                        : "text-mid-grey group-hover:text-secondary"
                     }`}
                   >
                     {step.stage}
@@ -63,7 +63,7 @@ export default function How() {
             </div>
           </div>
 
-          <div className="flex flex-row gap-8">
+          <div className="flex flex-row gap-8 h-full">
             <ChatBox stage={selectedStage} />
             <div className="flex flex-col max-w-xs">
               {stepsText.map((step, i) => (
@@ -71,7 +71,7 @@ export default function How() {
                   className={`flex flex-col cursor-pointer p-6 transition-all duration-200 ${
                     selectedStage === i
                       ? "text-accent scale-[1.02]"
-                      : "opacity-70"
+                      : "text-mid-grey hover:text-secondary"
                   }`}
                   onClick={() => setSelectedStage(i)}
                   key={i}

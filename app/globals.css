@@ -107,3 +107,7 @@ html {
     @apply text-3xl;
   }
 }
+
+.scroll-mt-neg-20 {
+  scroll-margin-top: -5rem;
+}

@@ -26,11 +26,11 @@ export default function How() {
 
   return (
     <>
-      <Section className="bg-primary relative pb-30">
+      <Section className="bg-primary relative pb-96">
         <div className="flex flex-col items-center text-primary-foreground py-20 gap-16">
           <h2>How Does it Work?</h2>
           <div className="flex flex-col items-center gap-4">
-            <h6>Select a Stage:</h6>
+            <h6 className="text-lg">Select a Stage:</h6>
             <div className="flex flex-row px-8 items-center gap-16 ">
               {stepsText.map((step, i) => (
                 <a
@@ -61,17 +61,30 @@ export default function How() {
                 </a>
               ))}
             </div>
+            <div className="flex flex-col lg:hidden max-w-lg text-center">
+              {stepsText.map((step, i) => (
+                <a
+                  className={`flex flex-col cursor-pointer p-6 text-secondary transition-all duration-200 ${
+                    selectedStage === i ? "" : "hidden"
+                  }`}
+                  onClick={() => setSelectedStage(i)}
+                  key={i}
+                >
+                  <p className="text-sm">Stage {i + 1}:</p>
+                  <h4>{step.title}</h4>
+                  <p className="">{step.text}</p>
+                </a>
+              ))}
+            </div>
           </div>
 
           <div className="flex flex-row gap-8 h-full">
             <ChatBox stage={selectedStage} />
-            <div className="flex flex-col max-w-xs">
+            <div className="hidden lg:flex flex-col max-w-xs">
               {stepsText.map((step, i) => (
                 <a
-                  className={`flex flex-col cursor-pointer p-6 transition-all duration-200 ${
-                    selectedStage === i
-                      ? "text-accent scale-[1.02]"
-                      : "text-mid-grey hover:text-secondary"
+                  className={`flex flex-col p-6 transition-all duration-200 ${
+                    selectedStage === i ? "text-secondary" : "text-mid-grey"
                   }`}
                   onClick={() => setSelectedStage(i)}
                   key={i}
@@ -84,7 +97,7 @@ export default function How() {
             </div>
           </div>
         </div>
-        <div className="absolute -bottom-96 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="absolute -bottom-48 left-1/2 transform -translate-x-1/2 z-10">
           <div className="w-216 h-128 bg-secondary z-10 rounded-md shadow-lg outline" />
         </div>
       </Section>

@@ -35,7 +35,7 @@ function SingleFeature({
 
 export default function Features() {
   return (
-    <Section className="pt-128 pb-64">
+    <Section className="pt-96 pb-64 scroll-mt-neg-20" id="features">
       <div className="flex flex-col items-center gap-32">
         <SingleFeature
           title="Bridge The Gap"

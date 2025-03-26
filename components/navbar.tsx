@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { scrollToEmail } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,7 +23,7 @@ export default function Navbar() {
       }`}
     >
       <div className="flex flex-row justify-between items-center py-2 px-4 md:px-10 lg:px-15">
-        <a className="flex flex-row items-center" href="/">
+        <Link href="/" className="flex flex-row items-center">
           <Image
             src="/logo.png"
             alt="Inquiryon Logo. Sparkle!"
@@ -32,7 +33,7 @@ export default function Navbar() {
           <h6 className="text-3xl pt-[4px] font-sans-logo hover:text-accent">
             Inquiryon
           </h6>
-        </a>
+        </Link>
         {/* <div className="hidden lg:flex flex-row gap-10 text-lg font-semibold font-sans-header ">
           {[
             { name: "Home", href: "#" },

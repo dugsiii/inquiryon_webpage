@@ -1,5 +1,5 @@
 ---
-title: "My Secondy Post"
+title: "Ok THird Post"
 slug: "first-post"
 date: "2025-02-25"
 summary: "Amplifyo Suggestions"

@@ -1,5 +1,6 @@
 import React from "react";
 import { bubbleText } from "./bubbleText";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Bubble({
   children,
@@ -61,12 +62,22 @@ export default function ChatBox({ stage }: { stage: number }) {
   const bubbles = bubbleText[stage] ?? [];
 
   return (
-    <div className="h-full w-xl py-12 px-8 flex flex-col rounded-lg gap-6 bg-dark-grey">
-      {bubbles.map((cluster, index) => (
-        <BubbleCluster key={index} leftAligned={index % 2 !== 0}>
-          {React.Children.toArray(cluster)}
-        </BubbleCluster>
-      ))}
+    <div className="h-full w-xl py-12 px-8 flex flex-col rounded-lg gap-6 bg-dark-grey transition-all">
+      <AnimatePresence mode="wait">
+        {bubbles.map((cluster, index) => (
+          <motion.div
+            key={`${stage}-${index}`}
+            initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
+            transition={{ duration: 0.2 }}
+          >
+            <BubbleCluster leftAligned={index % 2 !== 0}>
+              {React.Children.toArray(cluster)}
+            </BubbleCluster>
+          </motion.div>
+        ))}
+      </AnimatePresence>
     </div>
   );
 }

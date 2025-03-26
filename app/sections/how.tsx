@@ -39,8 +39,10 @@ export default function How() {
                   className={`cursor-pointer flex flex-row gap-4 items-center`}
                 >
                   <div
-                    className={`w-8 h-8 rounded-xs rotate-45 flex justify-center transition-colors items-center ${
-                      selectedStage === i ? "bg-accent" : "bg-secondary"
+                    className={`w-8 h-8 rounded-xs rotate-45 flex justify-center transition-all items-center ${
+                      selectedStage === i
+                        ? "bg-accent"
+                        : "bg-secondary opacity-70"
                     }`}
                   >
                     <div className="-rotate-45 text-center text-xl font-sans-header text-primary">
@@ -48,8 +50,10 @@ export default function How() {
                     </div>
                   </div>
                   <h5
-                    className={`text-2xl transition-colors ${
-                      selectedStage === i ? "text-accent" : "text-secondary"
+                    className={`text-2xl transition-all ${
+                      selectedStage === i
+                        ? "text-accent underline"
+                        : "text-secondary opacity-70"
                     }`}
                   >
                     {step.stage}

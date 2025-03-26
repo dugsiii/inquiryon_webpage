@@ -22,7 +22,7 @@ export default function Navbar() {
       }`}
     >
       <div className="flex flex-row justify-between items-center py-2 px-4 md:px-10 lg:px-15">
-        <a className="flex flex-row items-center" href="#">
+        <a className="flex flex-row items-center" href="/">
           <Image
             src="/logo.png"
             alt="Inquiryon Logo. Sparkle!"
@@ -33,7 +33,7 @@ export default function Navbar() {
             Inquiryon
           </h6>
         </a>
-        <div className="hidden lg:flex flex-row gap-10 text-lg font-semibold font-sans-header ">
+        {/* <div className="hidden lg:flex flex-row gap-10 text-lg font-semibold font-sans-header ">
           {[
             { name: "Home", href: "#" },
             { name: "Features", href: "#features" },
@@ -46,7 +46,7 @@ export default function Navbar() {
               </a>
             </div>
           ))}
-        </div>
+        </div> */}
         <Button
           onClick={scrollToEmail}
           variant={`${scrolled ? "blue" : "default"}`}

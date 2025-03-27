@@ -54,7 +54,7 @@ const faqText: FAQItemProps[] = [
 export default function FAQ() {
   return (
     <Section>
-      <div className="flex flex-col py-32 mx-auto items-center max-w-3xl gap-12">
+      <div className="flex flex-col py-8 sm:py-32 mx-auto items-center max-w-3xl gap-12">
         <h2>FAQ</h2>
         <div className="flex flex-col gap-2 w-full">
           {faqText.map((faq, index) => (

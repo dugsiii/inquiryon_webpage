@@ -21,7 +21,7 @@ function SingleFeature({
       <Image
         src={image}
         alt={imageAlt}
-        className="hidden xl:block"
+        className="hidden lg:block"
         width={511}
         height={408}
       />

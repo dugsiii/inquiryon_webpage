@@ -31,7 +31,7 @@ export default function About() {
                 <p>Founder</p>
               </div>
             </div>
-            <p className="max-w-lg">
+            <p className="max-w-xs sm:max-w-lg">
               Hi I’m Jeshua! I’ve always been passionate about AI, not just as a
               technology, but as a tool to <b>empower people</b>. I founded
               Inquiryon to make AI more intuitive, in order to simplify lives

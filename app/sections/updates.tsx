@@ -17,14 +17,14 @@ export default async function Updates() {
     <Section id="about">
       <div className="flex flex-col items-center py-16 gap-12 w-full">
         <h3>Latest Blog Posts</h3>
-        <div className="flex flex-row flex-1 gap-16">
+        <div className="grid gap-4 sm:gap-8 lg:gap-16 grid-cols-1 justify-center sm:grid-cols-2 xl:grid-cols-3">
           {posts.slice(0, 3).map((post) => (
-            <a key={post.slug} className="flex flex-col justify-center group">
+            <div key={post.slug} className="flex flex-col items-center group">
               <a
-                className="h-40 w-64 bg-gray-300"
+                className="h-48 w-78 bg-gray-300"
                 href={`/blog/${post.slug}`}
               />
-              <div className="flex flex-col px-2 py-2 group-hover:text-hover group">
+              <div className="flex flex-col px-2 py-2 items-center group-hover:text-hover group">
                 <a
                   className="text-2xl font-sans-header"
                   href={`/blog/${post.slug}`}
@@ -33,7 +33,7 @@ export default async function Updates() {
                 </a>
                 <p className="text-sm">{formatDate(post.date)}</p>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

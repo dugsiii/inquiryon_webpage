@@ -27,11 +27,11 @@ export default function How() {
   return (
     <>
       <Section className="bg-primary relative pb-96">
-        <div className="flex flex-col items-center text-primary-foreground py-20 gap-16">
-          <h2>How Does it Work?</h2>
-          <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center text-primary-foreground py-20 gap-4 sm:gap-16">
+          <h2 className="text-4xl sm:text-5xl">How Does it Work?</h2>
+          <div className="flex flex-col items-center gap-4 pb-4 sm:pb-1">
             <h6 className="text-lg">Select a Stage:</h6>
-            <div className="flex flex-row px-8 items-center gap-16 ">
+            <div className="flex flex-row px-8 items-center gap-12 sm:gap-16 ">
               {stepsText.map((step, i) => (
                 <a
                   key={i}
@@ -50,7 +50,7 @@ export default function How() {
                     </div>
                   </div>
                   <h5
-                    className={`text-2xl transition-all ${
+                    className={`text-2xl hidden sm:block transition-all ${
                       selectedStage === i
                         ? "text-accent underline"
                         : "text-mid-grey group-hover:text-secondary"
@@ -70,8 +70,7 @@ export default function How() {
                   onClick={() => setSelectedStage(i)}
                   key={i}
                 >
-                  <p className="text-sm">Stage {i + 1}:</p>
-                  <h4>{step.title}</h4>
+                  <h5 className="text-2xl">{step.title}</h5>
                   <p className="">{step.text}</p>
                 </a>
               ))}

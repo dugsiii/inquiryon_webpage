@@ -1,4 +1,5 @@
 import About from "./sections/about";
+import CTA from "./sections/cta";
 import FAQ from "./sections/faq";
 import Features from "./sections/features";
 import Hero from "./sections/hero";
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Updates />
       <FAQ />
+      <CTA />
     </div>
   );
 }

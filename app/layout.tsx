@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Mulish, Chivo, Rajdhani } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const chivo = Chivo({
   variable: "--font-header",
@@ -36,6 +37,7 @@ export default function RootLayout({
       >
         <Navbar />
         <div>{children}</div>
+        <Footer />
       </body>
     </html>
   );

@@ -15,9 +15,9 @@ export default function About() {
           </p>
         </div>
         <div className="h-0.5 w-24 bg-secondary"></div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center gap-8 lg:gap-1">
           <h3>Our Team</h3>
-          <div className="flex flex-row items-center gap-16">
+          <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-16">
             <div className="flex flex-col items-center gap-2">
               <Image
                 src="/founder.png"
@@ -31,7 +31,7 @@ export default function About() {
                 <p>Founder</p>
               </div>
             </div>
-            <p className="max-w-sm">
+            <p className="max-w-lg">
               Hi I’m Jeshua! I’ve always been passionate about AI, not just as a
               technology, but as a tool to <b>empower people</b>. I founded
               Inquiryon to make AI more intuitive, in order to simplify lives

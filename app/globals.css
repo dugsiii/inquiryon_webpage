@@ -38,6 +38,7 @@
   --color-primary: var(--primary);
   --color-mid-grey: var(--mid-grey);
   --color-dark-grey: var(--dark-grey);
+  --color-hover: var(--hover);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -59,6 +60,7 @@
   --secondary: oklch(96.72% 0 0);
   --accent: oklch(82.65% 0.0996 214.42);
   --accent-darker: oklch(72.58% 0.097 214.54);
+  --hover: oklch(58.67% 0.0697 253.06);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(28.09% 0 0);
   --input: oklch(0.922 0 0);

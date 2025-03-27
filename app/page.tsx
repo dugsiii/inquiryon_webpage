@@ -1,4 +1,5 @@
 import About from "./sections/about";
+import FAQ from "./sections/faq";
 import Features from "./sections/features";
 import Hero from "./sections/hero";
 import How from "./sections/how";
@@ -12,6 +13,7 @@ export default function Home() {
       <Features />
       <About />
       <Updates />
+      <FAQ />
     </div>
   );
 }

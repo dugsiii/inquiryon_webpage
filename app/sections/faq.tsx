@@ -1,5 +1,7 @@
 "use client";
+import FadeInOnScroll from "@/components/fadeInOnScroll";
 import Section from "@/components/section";
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 
 type FAQItemProps = {
@@ -19,11 +21,20 @@ export function FAQItem({ question, answer }: FAQItemProps) {
         <h6 className="text-xl group-hover:text-hover">{question}</h6>
         <a className="text-2xl">{isOpen ? "-" : "+"}</a>
       </div>
-      {isOpen && (
-        <div className="p-4">
-          <p>{answer}</p>
-        </div>
-      )}
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            key="content"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="overflow-hidden"
+          >
+            <p className="p-4">{answer}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -54,14 +65,20 @@ const faqText: FAQItemProps[] = [
 export default function FAQ() {
   return (
     <Section>
-      <div className="flex flex-col py-8 sm:py-32 mx-auto items-center max-w-3xl gap-12">
-        <h2>FAQ</h2>
-        <div className="flex flex-col gap-2 w-full">
-          {faqText.map((faq, index) => (
-            <FAQItem key={index} question={faq.question} answer={faq.answer} />
-          ))}
+      <FadeInOnScroll>
+        <div className="flex flex-col py-8 sm:py-32 mx-auto items-center max-w-3xl gap-12">
+          <h2>FAQ</h2>
+          <div className="flex flex-col gap-2 w-full">
+            {faqText.map((faq, index) => (
+              <FAQItem
+                key={index}
+                question={faq.question}
+                answer={faq.answer}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </FadeInOnScroll>
     </Section>
   );
 }

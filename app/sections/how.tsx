@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Section from "@/components/section";
 import ChatBox from "./components/chatBox";
+import FadeInOnScroll from "@/components/fadeInOnScroll";
 
 export default function How() {
   const [selectedStage, setSelectedStage] = useState(0);
@@ -28,57 +29,62 @@ export default function How() {
     <>
       <Section className="bg-primary relative pb-64 sm:pb-96">
         <div className="flex flex-col items-center text-primary-foreground py-20 gap-4 sm:gap-16">
-          <h2 className="text-4xl sm:text-5xl">How Does it Work?</h2>
-          <div className="flex flex-col items-center gap-4 pb-4 sm:pb-0">
-            <h6 className="text-lg">Select a Stage:</h6>
-            <div className="flex flex-row px-8 items-center gap-12 sm:gap-16 ">
-              {stepsText.map((step, i) => (
-                <a
-                  key={i}
-                  onClick={() => setSelectedStage(i)}
-                  className={`cursor-pointer flex flex-row gap-4 items-center group`}
-                >
-                  <div
-                    className={`w-8 h-8 rounded-xs rotate-45 flex justify-center transition-all items-center ${
-                      selectedStage === i
-                        ? "bg-accent"
-                        : "bg-mid-grey group-hover:bg-secondary"
-                    }`}
+          <FadeInOnScroll>
+            <h2 className="text-4xl sm:text-5xl">How Does it Work?</h2>
+          </FadeInOnScroll>
+          <FadeInOnScroll>
+            <div className="flex flex-col items-center gap-4 pb-4 sm:pb-0">
+              <h6 className="text-lg">Select a Stage:</h6>
+              <div className="flex flex-row px-8 items-center gap-12 sm:gap-16 ">
+                {stepsText.map((step, i) => (
+                  <a
+                    key={i}
+                    onClick={() => setSelectedStage(i)}
+                    className={`cursor-pointer flex flex-row gap-4 items-center group`}
                   >
-                    <div className="-rotate-45 text-center text-xl font-sans-header text-primary">
-                      {i + 1}
+                    <div
+                      className={`w-8 h-8 rounded-xs rotate-45 flex justify-center transition-all items-center ${
+                        selectedStage === i
+                          ? "bg-accent"
+                          : "bg-mid-grey group-hover:bg-secondary"
+                      }`}
+                    >
+                      <div className="-rotate-45 text-center text-xl font-sans-header text-primary">
+                        {i + 1}
+                      </div>
                     </div>
-                  </div>
-                  <h5
-                    className={`text-2xl hidden sm:block transition-all ${
-                      selectedStage === i
-                        ? "text-accent underline"
-                        : "text-mid-grey group-hover:text-secondary"
-                    }`}
-                  >
-                    {step.stage}
-                  </h5>
-                </a>
-              ))}
-            </div>
-            <div className="flex flex-col lg:hidden max-w-lg text-center">
-              {stepsText.map((step, i) => (
-                <a
-                  className={`flex flex-col cursor-pointer p-6 text-secondary transition-all duration-200 ${
-                    selectedStage === i ? "" : "hidden"
-                  }`}
-                  onClick={() => setSelectedStage(i)}
-                  key={i}
-                >
-                  <h5 className="text-2xl">{step.title}</h5>
-                  <p className="">{step.text}</p>
-                </a>
-              ))}
-            </div>
-          </div>
+                    <h5
+                      className={`text-2xl hidden sm:block transition-all ${
+                        selectedStage === i
+                          ? "text-accent underline"
+                          : "text-mid-grey group-hover:text-secondary"
+                      }`}
+                    >
+                      {step.stage}
+                    </h5>
+                  </a>
+                ))}
+              </div>
 
+              <div className="flex flex-col lg:hidden max-w-lg text-center">
+                {stepsText.map((step, i) => (
+                  <a
+                    className={`flex flex-col cursor-pointer p-6 text-secondary transition-all duration-200 ${
+                      selectedStage === i ? "" : "hidden"
+                    }`}
+                    onClick={() => setSelectedStage(i)}
+                    key={i}
+                  >
+                    <h5 className="text-2xl">{step.title}</h5>
+                    <p className="">{step.text}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </FadeInOnScroll>
           <div className="flex flex-row gap-8 w-full max-w-3xl lg:max-w-5xl h-full">
             <ChatBox stage={selectedStage} />
+
             <div className="hidden lg:flex flex-col max-w-xs">
               {stepsText.map((step, i) => (
                 <a

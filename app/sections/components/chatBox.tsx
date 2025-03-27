@@ -41,7 +41,7 @@ export function BubbleCluster({
   return (
     <div
       className={`flex flex-col gap-1 ${
-        leftAligned ? "items-start" : "items-end"
+        leftAligned ? "items-start pr-4" : "items-end pl-4"
       }`}
     >
       {React.Children.map(children, (bubbleText, index) => {
@@ -62,7 +62,7 @@ export default function ChatBox({ stage }: { stage: number }) {
   const bubbles = bubbleText[stage] ?? [];
 
   return (
-    <div className="flex-1 w-xl py-12 px-8 flex flex-col rounded-lg gap-6 bg-dark-grey transition-all">
+    <div className="w-full mx-auto py-8 md:py-12 px-4 md:px-8 flex flex-col rounded-lg gap-8 md:gap-6 bg-dark-grey transition-all">
       <AnimatePresence mode="wait">
         {bubbles.map((cluster, index) => (
           <motion.div

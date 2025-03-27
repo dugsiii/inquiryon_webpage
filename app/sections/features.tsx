@@ -7,7 +7,7 @@ function SingleFeature({
   title,
   image,
   imageAlt,
-  className = "flex-row",
+  className = "lg:flex-row",
   children,
 }: {
   title: string;
@@ -17,16 +17,10 @@ function SingleFeature({
   children: React.ReactNode;
 }) {
   return (
-    <div className={`flex ${className} gap-16 items-center`}>
-      <Image
-        src={image}
-        alt={imageAlt}
-        className="hidden lg:block"
-        width={511}
-        height={408}
-      />
+    <div className={`flex flex-col ${className} gap-16 items-center`}>
+      <Image src={image} alt={imageAlt} className="" width={511} height={408} />
       <div className="flex flex-col max-w-md gap-4">
-        <h2>{title}</h2>
+        <h2 className="text-4xl lg:text-5xl">{title}</h2>
         {children}
       </div>
     </div>
@@ -35,7 +29,10 @@ function SingleFeature({
 
 export default function Features() {
   return (
-    <Section className="pt-96 pb-64 scroll-mt-neg-20" id="features">
+    <Section
+      className="pt-64 sm:pt-96 pb-48 sm:pb-64 scroll-mt-neg-20"
+      id="features"
+    >
       <div className="flex flex-col items-center gap-32">
         <SingleFeature
           title="Bridge The Gap"
@@ -56,7 +53,7 @@ export default function Features() {
           title="Bridge The Gap"
           image="/spell-book.png"
           imageAlt="Hero Image"
-          className="flex-row-reverse"
+          className="lg:flex-row-reverse"
         >
           <p>
             AI is powerful, but users struggle to communicate with it. Without
@@ -67,7 +64,7 @@ export default function Features() {
             intuitive by guiding it to ask the right follow-ups. No extra effort
             from users, no lo st customers for you.
           </p>
-          <div>
+          <div className="w-full flex justify-center lg:block">
             <Button className="w-fit">Wassup</Button>
           </div>
         </SingleFeature>

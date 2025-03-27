@@ -12,13 +12,15 @@ export default async function BlogPost({
   const content = await markdownToHtml(post.content || "");
 
   return (
-    <div className="flex flex-col mx-auto max-w-2xl py-24 gap-8">
-      <div className="flex flex-col items-center">
+    <div className="flex flex-col mx-auto items-center py-24 p-6 gap-8">
+      <div className="flex flex-col items-center pb-12">
         <h4>{post.frontmatter.title}</h4>
         <p>{post.frontmatter.date}</p>
       </div>
-
-      <div className="prose" dangerouslySetInnerHTML={{ __html: content }} />
+      <div
+        className="prose max-w-2xl w-full"
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
       <Updates />
     </div>
   );

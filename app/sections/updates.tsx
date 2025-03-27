@@ -1,5 +1,6 @@
 import Section from "@/components/section";
 import { getAllBlogPosts } from "@/lib/blog-utils";
+import Link from "next/link";
 import React from "react";
 
 function formatDate(dateString: string): string {
@@ -21,16 +22,16 @@ export default async function Updates() {
           {posts.slice(0, 3).map((post) => (
             <div key={post.slug} className="flex flex-col items-center group">
               <a
-                className="h-48 w-78 bg-gray-300"
+                className="h-48 w-[312px] bg-gray-300 block"
                 href={`/blog/${post.slug}`}
               />
               <div className="flex flex-col px-2 py-2 items-center group-hover:text-hover group">
-                <a
+                <Link
                   className="text-2xl font-sans-header"
                   href={`/blog/${post.slug}`}
                 >
                   {post.title}
-                </a>
+                </Link>
                 <p className="text-sm">{formatDate(post.date)}</p>
               </div>
             </div>

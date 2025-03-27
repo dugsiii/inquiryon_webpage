@@ -26,10 +26,10 @@ export default function How() {
 
   return (
     <>
-      <Section className="bg-primary relative pb-96">
+      <Section className="bg-primary relative pb-64 sm:pb-96">
         <div className="flex flex-col items-center text-primary-foreground py-20 gap-4 sm:gap-16">
           <h2 className="text-4xl sm:text-5xl">How Does it Work?</h2>
-          <div className="flex flex-col items-center gap-4 pb-4 sm:pb-1">
+          <div className="flex flex-col items-center gap-4 pb-4 sm:pb-0">
             <h6 className="text-lg">Select a Stage:</h6>
             <div className="flex flex-row px-8 items-center gap-12 sm:gap-16 ">
               {stepsText.map((step, i) => (
@@ -77,7 +77,7 @@ export default function How() {
             </div>
           </div>
 
-          <div className="flex flex-row gap-8 h-full">
+          <div className="flex flex-row gap-8 w-full max-w-3xl lg:max-w-5xl h-full">
             <ChatBox stage={selectedStage} />
             <div className="hidden lg:flex flex-col max-w-xs">
               {stepsText.map((step, i) => (
@@ -96,8 +96,11 @@ export default function How() {
             </div>
           </div>
         </div>
-        <div className="absolute -bottom-48 left-1/2 transform -translate-x-1/2 z-10">
-          <div className="w-216 h-128 bg-secondary z-10 rounded-md shadow-lg outline" />
+        <div className="absolute -bottom-32 sm:-bottom-48 w-full px-4 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="max-w-3xl mx-auto flex flex-col items-center gap-6">
+            <h3 className="text-secondary sm:text-transparent">Demo Video</h3>
+            <div className="w-full aspect-[3/2] bg-secondary z-10 rounded-md shadow-lg outline" />
+          </div>
         </div>
       </Section>
     </>

@@ -9,7 +9,7 @@ import Section from "@/components/section";
 export default function Hero() {
   return (
     <Section>
-      <div className="flex justify-center items-center py-30 lg:py-40 gap-10">
+      <div className="flex flex-col lg:flex-row justify-center items-center py-30 lg:py-40 gap-10">
         <div className="flex flex-col my-auto max-w-lg gap-6">
           <h1 className="text-4xl md:text-5xl lg:text-7xl">
             AI That Knows What to Ask
@@ -40,7 +40,7 @@ export default function Hero() {
         <Image
           src="/spell-book.png"
           alt="book hero image"
-          className="hidden xl:block"
+          className="hidden lg:block"
           width={511}
           height={408}
         />

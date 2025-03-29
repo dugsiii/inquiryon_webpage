@@ -9,7 +9,7 @@ function SingleFeature({
   title,
   image,
   imageAlt,
-  className = "lg:flex-row",
+  className = "xl:flex-row",
   children,
 }: {
   title: string;
@@ -20,13 +20,15 @@ function SingleFeature({
 }) {
   return (
     <FadeInOnScroll>
-      <div className={`flex flex-col ${className} gap-16 items-center`}>
+      <div
+        className={`flex flex-col ${className} gap-16 lg:gap-32 items-center`}
+      >
         <Image
           src={image}
           alt={imageAlt}
           className=""
-          width={511}
-          height={408}
+          width={600}
+          height={480}
         />
         <div className="flex flex-col max-w-md gap-4">
           <h2 className="text-4xl lg:text-5xl">{title}</h2>
@@ -46,8 +48,8 @@ export default function Features() {
       <div className="flex flex-col items-center gap-32">
         <SingleFeature
           title="Bridge The Gap"
-          image="/spell-book.png"
-          imageAlt="Hero Image"
+          image="/1.png"
+          imageAlt="Cleaving the Raw Gemstone"
         >
           <p>
             AI is powerful—but it needs the right context to work well. When
@@ -60,9 +62,9 @@ export default function Features() {
         </SingleFeature>
         <SingleFeature
           title="Bridge The Gap"
-          image="/spell-book.png"
-          imageAlt="Hero Image"
-          className="lg:flex-row-reverse"
+          image="/2.png"
+          imageAlt="Blueprint Diagram of final Gemstone"
+          className="xl:flex-row-reverse"
         >
           <p>
             AI integrations don’t have to be complicated. Drop our system right
@@ -78,7 +80,7 @@ export default function Features() {
         <SingleFeature
           title="Bridge The Gap"
           image="/spell-book.png"
-          imageAlt="Hero Image"
+          imageAlt="Necklace with Final Gemstones set in the shape of the Inquiryon Logo."
         >
           <p>
             AI is powerful, but users struggle to communicate with it. Without

@@ -45,20 +45,38 @@ export default function Hero() {
             </div>
           </div>
         </FadeInOnScroll>
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
+        <div className=" relative w-[700px] h-[560px] hidden lg:block">
+          <motion.div
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <Image
+              src="/hero-main-crystal.png"
+              alt="Crystal base"
+              fill
+              className="object-contain"
+            />
+          </motion.div>
+          <motion.div
+            animate={{ y: [0, -5, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <Image
+              src="/hero-bg-crystals.png"
+              alt="Crystal base"
+              fill
+              className="object-contain"
+            />
+          </motion.div>
           <Image
-            src="/spell-book.png"
-            alt="book hero image"
-            className="hidden lg:block"
-            width={511}
-            height={408}
+            src="/hero-wisp.png"
+            alt="Crystal overlay"
+            fill
+            className="object-contain pointer-events-none"
           />
-        </motion.div>
+        </div>
       </div>
     </Section>
   );

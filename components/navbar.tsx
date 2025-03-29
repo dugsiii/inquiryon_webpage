@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <div
       className={`sticky top-0 z-50 bg-background shadow-sm border-b border-mid-grey transition-colors duration-700 ${
-        scrolled ? "bg-primary text-secondary" : true
+        scrolled ? "bg-primary text-secondary" : ""
       }`}
     >
       <div className="flex flex-row justify-between items-center py-2 px-4 md:px-10 lg:px-15">

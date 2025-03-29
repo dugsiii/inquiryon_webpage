@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="flex flex-col lg:flex-row justify-center items-center py-20 md:py-30 lg:py-40 gap-10">
         <FadeInOnScroll>
           <div className="flex flex-col my-auto max-w-lg gap-6">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl leading-20">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl leading-tight lg:leading-20">
               AI That Knows What to <Pop>Ask</Pop>
             </h1>
             <p className="text-[1.075rem]">
@@ -46,38 +46,48 @@ export default function Hero() {
             </div>
           </div>
         </FadeInOnScroll>
-        <div className=" relative w-[700px] h-[560px] hidden lg:block">
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute inset-0"
-          >
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <div className=" relative w-[700px] h-[560px] hidden lg:block">
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute inset-0"
+            >
+              <Image
+                src="/hero-main-crystal.webp"
+                alt="Crystal base"
+                fill
+                priority
+                className="object-contain"
+              />
+            </motion.div>
+            <motion.div
+              animate={{ y: [0, -5, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute inset-0"
+            >
+              <Image
+                src="/hero-bg-crystals.webp"
+                alt="Crystal base"
+                fill
+                priority
+                className="object-contain"
+              />
+            </motion.div>
             <Image
-              src="/hero-main-crystal.webp"
-              alt="Crystal base"
+              src="/hero-wisp.webp"
+              alt="Crystal overlay"
               fill
-              className="object-contain"
+              priority
+              className="object-contain pointer-events-none"
             />
-          </motion.div>
-          <motion.div
-            animate={{ y: [0, -5, 0] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute inset-0"
-          >
-            <Image
-              src="/hero-bg-crystals.webp"
-              alt="Crystal base"
-              fill
-              className="object-contain"
-            />
-          </motion.div>
-          <Image
-            src="/hero-wisp.webp"
-            alt="Crystal overlay"
-            fill
-            className="object-contain pointer-events-none"
-          />
-        </div>
+          </div>
+        </motion.div>
       </div>
     </Section>
   );

@@ -39,7 +39,8 @@ export default function CTA() {
                 </Button>
                 <p>
                   Or shoot us an email:{" "}
-                  <a
+                  <button
+                    type="button"
                     className="w-fit cursor-pointer text-primary hover:text-hover"
                     onClick={() => {
                       navigator.clipboard.writeText("team@inquiryon.com");
@@ -48,7 +49,7 @@ export default function CTA() {
                     }}
                   >
                     {copiedEmail ? "Email Copied!" : "Copy Email"}
-                  </a>
+                  </button>
                 </p>
               </div>
             </div>

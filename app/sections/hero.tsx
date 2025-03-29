@@ -7,6 +7,7 @@ import { scrollToEmail } from "@/lib/utils";
 import Section from "@/components/section";
 import FadeInOnScroll from "@/components/fadeInOnScroll";
 import { motion } from "framer-motion";
+import Pop from "@/components/ui/pop";
 
 export default function Hero() {
   return (
@@ -14,17 +15,17 @@ export default function Hero() {
       <div className="flex flex-col lg:flex-row justify-center items-center py-20 md:py-30 lg:py-40 gap-10">
         <FadeInOnScroll>
           <div className="flex flex-col my-auto max-w-lg gap-6">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl">
-              AI That Knows What to Ask
+            <h1 className="text-4xl md:text-5xl lg:text-7xl leading-20">
+              AI That Knows What to <Pop>Ask</Pop>
             </h1>
-            <p>
-              Users are vague. Your AI doesn’t have to be. We fill the context
-              gap so <b>your LLM can respond with confidence</b>. Join the
-              waitlist* for early access and start building context-aware AI
-              today!
+            <p className="text-[1.075rem]">
+              Users are vague. Your AI doesn’t have to be. <br />
+              We fill the context gap so{" "}
+              <b>your LLM can respond with confidence</b>. Join the waitlist*
+              for early access and start building context-aware AI today!
             </p>
             <div className="flex flex-col gap-1">
-              <div className="flex flex-col sm:flex-row gap-2 max-w-md">
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md">
                 <Input
                   id="email-input"
                   type="email"

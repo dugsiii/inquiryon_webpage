@@ -25,7 +25,7 @@ export default async function Updates() {
                 className="h-48 w-[312px] bg-gray-300 block"
                 href={`/blog/${post.slug}`}
               />
-              <div className="flex flex-col px-2 py-2 items-center group-hover:text-hover group">
+              <div className="flex flex-col px-2 py-2 items-center hover:text-hover group">
                 <Link
                   className="text-2xl font-sans-header"
                   href={`/blog/${post.slug}`}

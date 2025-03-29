@@ -15,14 +15,16 @@ export default function Footer() {
               width={40}
               height={40}
             />
-            <h6 className="text-3xl pt-[4px] font-sans-logo">Inquiryon</h6>
+            <h6 className="text-3xl pt-[4px] font-sans-logo hover:text-accent transition-colors">
+              Inquiryon
+            </h6>
           </Link>
           <div className="flex flex-col items-center justify-center gap-1">
             <p>Copyright ©{currentYear} Inquiryon, LLC</p>
             <a
               href="https://www.andrwyoung.com"
               target="blank"
-              className="text-xs text-mid-grey"
+              className="text-xs text-mid-grey transition-colors hover:text-secondary"
             >
               Website Designed by Andrew Yong
             </a>

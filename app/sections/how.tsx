@@ -39,10 +39,11 @@ export default function How() {
               <h6 className="text-lg">Select a Stage:</h6>
               <div className="flex flex-row px-8 items-center gap-12 sm:gap-16 ">
                 {stepsText.map((step, i) => (
-                  <a
+                  <button
+                    type="button"
                     key={i}
                     onClick={() => setSelectedStage(i)}
-                    className={`cursor-pointer flex flex-row gap-4 items-center group`}
+                    className={`cursor-pointer flex flex-row gap-4 items-center group transition-all hover:scale-[1.02] active:scale-95 duration-100 ease-in-out`}
                   >
                     <div
                       className={`w-8 h-8 rounded-xs rotate-45 flex justify-center transition-all items-center ${
@@ -64,13 +65,14 @@ export default function How() {
                     >
                       {step.stage}
                     </h5>
-                  </a>
+                  </button>
                 ))}
               </div>
 
               <div className="flex flex-col lg:hidden max-w-lg text-center">
                 {stepsText.map((step, i) => (
-                  <a
+                  <button
+                    type="button"
                     className={`flex flex-col cursor-pointer p-6 text-secondary transition-all duration-200 ${
                       selectedStage === i ? "" : "hidden"
                     }`}
@@ -79,7 +81,7 @@ export default function How() {
                   >
                     <h5 className="text-2xl">{step.title}</h5>
                     <p className="">{step.text}</p>
-                  </a>
+                  </button>
                 ))}
               </div>
             </div>
@@ -89,17 +91,18 @@ export default function How() {
 
             <div className="hidden lg:flex flex-col max-w-xs">
               {stepsText.map((step, i) => (
-                <a
-                  className={`flex flex-col p-6 transition-all duration-200 ${
+                <button
+                  className={`flex flex-col p-6 transition-all text-left duration-200 ${
                     selectedStage === i ? "text-secondary" : "text-mid-grey"
                   }`}
                   onClick={() => setSelectedStage(i)}
                   key={i}
+                  type="button"
                 >
                   <p className="text-sm">Stage {i + 1}:</p>
                   <h4>{step.title}</h4>
                   <p className="">{step.text}</p>
-                </a>
+                </button>
               ))}
             </div>
           </div>

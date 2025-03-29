@@ -95,7 +95,7 @@ html {
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans-header;
+    @apply font-sans-header tracking-[-0.01em];
   }
   h1 {
     @apply text-7xl;
@@ -109,28 +109,8 @@ html {
   h4 {
     @apply text-3xl;
   }
-}
 
-@layer utilities {
-  @keyframes shimmer {
-    0% {
-      background-position: -500px 0;
-    }
-    100% {
-      background-position: 500px 0;
-    }
-  }
-  
-  .shimmer {
-    background-image: linear-gradient(
-      to right,
-      transparent 0%,
-      rgba(255, 255, 255, 0.2) 20%,
-      rgba(255, 255, 255, 0.5) 50%,
-      transparent 80%
-    );
-    background-repeat: no-repeat;
-    background-size: 1000px 100%;
-    animation: shimmer 1.5s linear 1;
+  p {
+    @apply leading-relaxed;
   }
 }

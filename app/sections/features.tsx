@@ -3,6 +3,7 @@ import Section from "@/components/section";
 import React from "react";
 import Image from "next/image";
 import FadeInOnScroll from "@/components/fadeInOnScroll";
+import Pop from "@/components/ui/pop";
 
 function SingleFeature({
   title,
@@ -26,14 +27,14 @@ function SingleFeature({
           src={image}
           alt={imageAlt}
           className=""
-          width={600}
-          height={480}
+          width={500}
+          height={400}
           loading="lazy"
         />
         <div className="flex flex-col max-w-md gap-4">
-          <a className="text-4xl lg:text-5xl leading-tight font-sans-header">
+          <span className="text-4xl lg:text-5xl leading-tight tracking-[-0.01em] font-sans-header">
             {title}
-          </a>
+          </span>
           {children}
         </div>
       </div>
@@ -47,11 +48,11 @@ export default function Features() {
       className="pt-64 sm:pt-96 pb-48 sm:pb-64 scroll-mt-neg-20"
       id="features"
     >
-      <div className="flex flex-col items-center gap-32">
+      <div className="flex flex-col items-center gap-48">
         <SingleFeature
           title={
             <>
-              <a className="text-accent-foreground font-sans-header">Bridge </a>
+              <Pop>Bridge </Pop>
               The Gap
             </>
           }
@@ -75,9 +76,7 @@ export default function Features() {
         <SingleFeature
           title={
             <>
-              <a className="text-accent-foreground font-sans-header">
-                Specialized{" "}
-              </a>
+              <Pop>Specialized </Pop>
               By Design
             </>
           }
@@ -105,10 +104,7 @@ export default function Features() {
           title={
             <>
               Unlock The
-              <a className="text-accent-foreground font-sans-header">
-                {" "}
-                Full Potential
-              </a>
+              <Pop> Full Potential </Pop>
             </>
           }
           image="/3.webp"

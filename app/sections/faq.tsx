@@ -19,7 +19,7 @@ export function FAQItem({ question, answer }: FAQItemProps) {
         className="flex cursor-pointer flex-row justify-between group transition-colors items-center border-b-1 p-4"
       >
         <h6 className="text-xl group-hover:text-hover">{question}</h6>
-        <a className="text-2xl">{isOpen ? "-" : "+"}</a>
+        <span className="text-2xl">{isOpen ? "-" : "+"}</span>
       </div>
       <AnimatePresence initial={false}>
         {isOpen && (

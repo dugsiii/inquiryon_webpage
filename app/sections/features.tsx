@@ -2,7 +2,6 @@
 import Section from "@/components/section";
 import React from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import FadeInOnScroll from "@/components/fadeInOnScroll";
 
 function SingleFeature({
@@ -12,7 +11,7 @@ function SingleFeature({
   className = "xl:flex-row",
   children,
 }: {
-  title: string;
+  title: React.ReactNode;
   image: string;
   imageAlt: string;
   className?: string;
@@ -29,9 +28,12 @@ function SingleFeature({
           className=""
           width={600}
           height={480}
+          loading="lazy"
         />
         <div className="flex flex-col max-w-md gap-4">
-          <h2 className="text-4xl lg:text-5xl">{title}</h2>
+          <a className="text-4xl lg:text-5xl leading-tight font-sans-header">
+            {title}
+          </a>
           {children}
         </div>
       </div>
@@ -47,49 +49,80 @@ export default function Features() {
     >
       <div className="flex flex-col items-center gap-32">
         <SingleFeature
-          title="Bridge The Gap"
-          image="/1.png"
+          title={
+            <>
+              <a className="text-accent-foreground font-sans-header">Bridge </a>
+              The Gap
+            </>
+          }
+          image="/1.webp"
           imageAlt="Cleaving the Raw Gemstone"
         >
           <p>
-            AI is powerful—but it needs the right context to work well. When
-            users don’t know what to say, AI is left guessing—leading to vague
-            answers and missed intent. We fill the gap between what users ask
-            and what AI needs to know, guiding the model to ask smarter
-            follow-ups and deliver better results. No prompt engineering. Just
-            clearer, more helpful AI.
+            AI is powerful, but only when it has the <b>right context</b>. When
+            users provide vague or incomplete prompts, the model is left
+            guessing. <br />
+            <br />
+            Our system acts as a buffer between the user and your LLM. It
+            automatically <b>detects missing information</b>, asks clarifying
+            questions, and injects the context needed to produce accurate and
+            useful results.
+            <br />
+            <br /> No prompt engineering required.{" "}
+            <b>Just better answers, every time.</b>
           </p>
         </SingleFeature>
         <SingleFeature
-          title="Bridge The Gap"
-          image="/2.png"
+          title={
+            <>
+              <a className="text-accent-foreground font-sans-header">
+                Specialized{" "}
+              </a>
+              By Design
+            </>
+          }
+          image="/2.webp"
           imageAlt="Blueprint Diagram of final Gemstone"
           className="xl:flex-row-reverse"
         >
           <p>
-            AI integrations don’t have to be complicated. Drop our system right
-            between your users and your LLM—it’s a lightweight layer that
-            clarifies intent with a simple function call. No model retraining.
-            No complex setup. Just import, plug in, and instantly improve AI
-            understanding.
+            Generic AI struggles in specialized domains. We're building tools to
+            help you create a context-aware agent{" "}
+            <b>tailored to your environment.</b>
+            <br />
+            <br />
+            It’s designed to learn your domain and <b>improve over time</b> by
+            adapting to real user interactions.
+            <br />
+            <br /> The result is an AI that knows what to ask, how to help, and
+            gets <b>smarter the more it’s used.</b>
           </p>
-          <div className="w-full flex justify-center lg:block">
+          {/* <div className="w-full flex justify-center lg:block">
             <Button className="w-fit">Wassup</Button>
-          </div>
+          </div> */}
         </SingleFeature>
         <SingleFeature
-          title="Bridge The Gap"
-          image="/spell-book.png"
+          title={
+            <>
+              Unlock The
+              <a className="text-accent-foreground font-sans-header">
+                {" "}
+                Full Potential
+              </a>
+            </>
+          }
+          image="/3.webp"
           imageAlt="Necklace with Final Gemstones set in the shape of the Inquiryon Logo."
         >
           <p>
-            AI is powerful, but users struggle to communicate with it. Without
-            enough context, AI guesses: leading to vague answers and frustrated
-            customers.
+            When your AI has the right context and knows the right questions to
+            ask, it becomes more than just responsive.{" "}
+            <b>It becomes truly intelligent.</b>
             <br />
-            <br /> We bridge that gap, making AI conversations smarter and more
-            intuitive by guiding it to ask the right follow-ups. No extra effort
-            from users, no lo st customers for you.
+            <br />
+            Our system <b>expands what’s possible</b> by enabling smarter
+            interactions, broader accessibility, and better results across a
+            wide range of use cases.
           </p>
         </SingleFeature>
       </div>

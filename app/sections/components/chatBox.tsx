@@ -67,7 +67,7 @@ export default function ChatBox({ stage }: { stage: number }) {
         {bubbles.map((cluster, index) => (
           <motion.div
             key={`${stage}-${index}`}
-            initial={{ opacity: 0, y: 30 + 5 * index }}
+            initial={{ opacity: 0, y: 30 + 10 * index }}
             whileInView={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{

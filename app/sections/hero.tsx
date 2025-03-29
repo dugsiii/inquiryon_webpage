@@ -18,10 +18,10 @@ export default function Hero() {
               AI That Knows What to Ask
             </h1>
             <p>
-              Turn vague prompts into precise answers by
-              <b> asking smart questions.</b> This clarifies user intent, so
-              your LLM delivers the best response to your customers, every time.{" "}
-              <b>Secure your spot* </b>to get early access!
+              Users are vague. Your AI doesn’t have to be. We fill the context
+              gap so <b>your LLM can respond with confidence</b>. Join the
+              waitlist* for early access and start building context-aware AI
+              today!
             </p>
             <div className="flex flex-col gap-1">
               <div className="flex flex-col sm:flex-row gap-2 max-w-md">
@@ -36,11 +36,11 @@ export default function Hero() {
                   className="text-lg font-semibold"
                   onClick={scrollToEmail}
                 >
-                  Secure Spot
+                  Start Building!
                 </Button>
               </div>
               <p className="text-input-text px-2 text-xs">
-                *Limited to the first 300 businesses
+                *Early access is limited—claim your spot now.
               </p>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function Hero() {
             className="absolute inset-0"
           >
             <Image
-              src="/hero-main-crystal.png"
+              src="/hero-main-crystal.webp"
               alt="Crystal base"
               fill
               className="object-contain"
@@ -64,14 +64,14 @@ export default function Hero() {
             className="absolute inset-0"
           >
             <Image
-              src="/hero-bg-crystals.png"
+              src="/hero-bg-crystals.webp"
               alt="Crystal base"
               fill
               className="object-contain"
             />
           </motion.div>
           <Image
-            src="/hero-wisp.png"
+            src="/hero-wisp.webp"
             alt="Crystal overlay"
             fill
             className="object-contain pointer-events-none"

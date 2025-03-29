@@ -4,6 +4,31 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
+export const metadata: Metadata = {
+  title: {
+    default: "Inquiryon",
+    template: "%s | Inquiryon",
+  },
+  description:
+    "AI that knows what to ask. Refine user intent and unlock clarity.",
+  keywords: [
+    "AI intent refinement",
+    "LLM",
+    "smart prompt",
+    "customer support AI",
+  ],
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Inquiryon",
+    description: "AI that refines prompts through questions.",
+    images: "/opengraph-image.png",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+};
+
 const chivo = Chivo({
   variable: "--font-header",
   subsets: ["latin"],
@@ -14,16 +39,12 @@ const mulish = Mulish({
   subsets: ["latin"],
 });
 
+// just for the logo
 const rajdhani = Rajdhani({
   variable: "--font-logo",
   subsets: ["latin"],
   weight: "600",
 });
-
-export const metadata: Metadata = {
-  title: "Inquiryon",
-  description: "AI that asks questions",
-};
 
 export default function RootLayout({
   children,

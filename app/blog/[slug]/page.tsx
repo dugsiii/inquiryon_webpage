@@ -2,6 +2,10 @@ import Updates from "@/app/sections/updates";
 import markdownToHtml, { getPostBySlug } from "@/lib/blog-utils";
 import React from "react";
 
+export const metadata = {
+  title: "Blog",
+};
+
 export default async function BlogPost({
   params,
 }: {

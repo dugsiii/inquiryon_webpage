@@ -10,18 +10,18 @@ export default function How() {
   const stepsText = [
     {
       stage: "Q&A",
-      title: "Basic Q&A Stuff",
-      text: "Enable your LLM to ask clarifying questions based only on the current conversation: great for lightweight, focused interactions.",
+      title: "Local Context",
+      text: "Integrate lightweight Q&A capabilities into your LLM that allow it to ask simple follow-up questions based solely on the current conversation.",
     },
     {
       stage: "Context",
-      title: "Context Aware Code",
-      text: "Your LLM goes deeper by combining chat history and user-specific context to quickly fill in gaps and ask smarter, more personalized questions.",
+      title: "Context-aware intelligence",
+      text: "Go beyond single-session prompts. Leverage environmental context to help your LLM understand users better and respond with greater precision.",
     },
     {
       stage: "CAPE",
-      title: "Gather From Everyone",
-      text: "Leverage insights from similar users to refine and evolve the question-asking process: building a smarter, more adaptive system over time.",
+      title: "Domain-Level Intelligence",
+      text: "Understand more than just the context, understand the problem space. Tap into domain knowledge and group context, ask expert level questions and give amazing results.",
     },
   ];
 
@@ -30,7 +30,9 @@ export default function How() {
       <Section className="bg-primary relative pb-64 sm:pb-96">
         <div className="flex flex-col items-center text-primary-foreground py-20 gap-4 sm:gap-16">
           <FadeInOnScroll>
-            <h2 className="text-4xl sm:text-5xl">How Does it Work?</h2>
+            <h2 className="text-4xl sm:text-5xl text-center">
+              From Prompt to Precision
+            </h2>
           </FadeInOnScroll>
           <FadeInOnScroll>
             <div className="flex flex-col items-center gap-4 pb-4 sm:pb-0">

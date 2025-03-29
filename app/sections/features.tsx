@@ -86,7 +86,7 @@ export default function Features() {
           className="xl:flex-row-reverse"
         >
           <p>
-            Generic AI struggles in specialized domains. We're building tools to
+            Generic AI struggles in specialized domains. We’re building tools to
             help you create a context-aware agent{" "}
             <b>tailored to your environment.</b>
             <br />

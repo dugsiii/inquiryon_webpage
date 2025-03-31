@@ -15,6 +15,10 @@ export const bubbleText: React.ReactNode[][][] = [
         2. Who is it for? (Age or Grade?) <br />
         3. How long should it be? <br />
         4. Is there anything specific you want them to learn or be able to do by
+        the end? 1. What do you want the lesson to be about? <br />
+        2. Who is it for? (Age or Grade?) <br />
+        3. How long should it be? <br />
+        4. Is there anything specific you want them to learn or be able to do by
         the end?
       </p>,
     ],
@@ -22,6 +26,13 @@ export const bubbleText: React.ReactNode[][][] = [
       <p>
         Mathematics, 3rd Grade, 1 hour or less, and we are learning basic
         division and times tables.
+      </p>,
+    ],
+    [
+      <p>
+        Thanks for sharing—that really helps! A few more questions would make
+        the plan even better. Would you like me to ask them, or get your lesson
+        plan now?
       </p>,
     ],
     [

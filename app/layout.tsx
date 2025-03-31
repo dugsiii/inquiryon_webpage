@@ -56,6 +56,7 @@ export default function RootLayout({
       <body
         className={`${mulish.variable} ${rajdhani.variable} ${chivo.variable} antialiased`}
       >
+        {/* slap Google Analytics here */}
         <Navbar />
         <div>{children}</div>
         <Footer />

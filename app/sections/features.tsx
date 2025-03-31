@@ -97,7 +97,7 @@ export default function Features() {
             gets <b>smarter the more it’s used.</b>
           </p>
           {/* <div className="w-full flex justify-center lg:block">
-            <Button className="w-fit">Wassup</Button>
+            <Button className="w-fit" onClick={scrollToEmail}>Wassup</Button>
           </div> */}
         </SingleFeature>
         <SingleFeature

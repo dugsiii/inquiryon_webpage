@@ -35,7 +35,7 @@ export default function How() {
             </h2>
           </FadeInOnScroll>
           <FadeInOnScroll>
-            <div className="flex flex-col items-center gap-4 pb-4 sm:pb-0">
+            <div className="flex flex-col items-center gap-4 py-4 sm:pb-0 bg-dark-grey lg:bg-transparent rounded-lg">
               <h6 className="text-lg">Select a Stage:</h6>
               <div className="flex flex-row px-8 items-center gap-12 sm:gap-16 ">
                 {stepsText.map((step, i) => (
@@ -48,8 +48,8 @@ export default function How() {
                     <div
                       className={`w-8 h-8 rounded-xs rotate-45 flex justify-center transition-all items-center ${
                         selectedStage === i
-                          ? "bg-accent"
-                          : "bg-mid-grey group-hover:bg-secondary"
+                          ? "bg-accent ring-4 ring-accent/50"
+                          : "bg-mid-grey group-hover:bg-secondary animate-pulse"
                       }`}
                     >
                       <div className="-rotate-45 text-center text-xl font-sans-header text-primary">
@@ -59,7 +59,7 @@ export default function How() {
                     <h5
                       className={`text-2xl hidden sm:block transition-all ${
                         selectedStage === i
-                          ? "text-accent underline"
+                          ? "text-accent"
                           : "text-mid-grey group-hover:text-secondary"
                       }`}
                     >
@@ -71,17 +71,15 @@ export default function How() {
 
               <div className="flex flex-col lg:hidden max-w-lg text-center">
                 {stepsText.map((step, i) => (
-                  <button
-                    type="button"
-                    className={`flex flex-col cursor-pointer p-6 text-secondary transition-all duration-200 ${
+                  <div
+                    className={`flex flex-col cursor-pointer p-6 text-secondary transition-all items-center text-center duration-200 ${
                       selectedStage === i ? "" : "hidden"
                     }`}
-                    onClick={() => setSelectedStage(i)}
                     key={i}
                   >
                     <h5 className="text-2xl">{step.title}</h5>
                     <p className="">{step.text}</p>
-                  </button>
+                  </div>
                 ))}
               </div>
             </div>

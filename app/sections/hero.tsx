@@ -52,10 +52,14 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className=" relative w-[700px] h-[560px] hidden lg:block">
+          <div className=" relative w-[600px] h-[480px] hidden lg:block">
             <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              animate={{ y: [0, -12, 0] }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
               className="absolute inset-0"
             >
               <Image

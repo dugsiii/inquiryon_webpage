@@ -1,141 +1,79 @@
 ---
-title: "My First Post"
-slug: "first-post"
-date: "2025-03-25"
-summary: "Amplifyo Suggestions"
+title: "CAPE: A Path to Context-Aware AI Agents"
+slug: "cape-framework"
+date: "2025-04-25"
+imageUrl: "/cape-framework.png"
+summary: "Exploring the CAPE framework and its potential in enhancing AI agent performance."
 ---
 
-# Amplifyo Suggestions
+# Enhancing AI Workflows with CAPE: A Path to Context-Aware AI Agents
 
-> "Iron sharpens iron, and one man sharpens another." Proverbs 27:17
+> "Asking the right questions is half the answer." – Aristotle
 
 ## Honest Take
 
-At its core, Amplifyo works like a smart layer **on top of ChatGPT** (and other LLMs)—helping users organize their marketing thoughts and auto-generate content without needing to prompt manually.
+AI agents are becoming more adept at solving complex problems, but one persistent challenge remains: maintaining and enhancing context throughout multi-turn, multi-agent workflows. My research introduces **Context-Aware Prompt Enhancement (CAPE)**, a framework designed to address this very issue, by incorporating dynamic human-in-the-loop feedback to refine context and improve the output of AI agents. 
 
-It seems to be more of a marketing-focused **note-taking system** with AI integration. So teams can organize marketing ideas and use those notes to generate content like blog posts.
+At its core, CAPE seeks to enhance the effectiveness of large language models (LLMs) in multi-agent systems by leveraging human interactions to fill context gaps. Rather than relying solely on AI to generate content or make decisions, CAPE allows AI systems to learn from ongoing human feedback, continuously adapting and improving. 
 
-From where I’m standing, here are the biggest gaps I currently see:
+While the framework shows promising potential, there are still some key challenges that I believe are important to address moving forward:
 
-1. Over-reliance on AI as the differentiator
-2. Friction-heavy onboarding and UI
-3. Conscience concerns around guidance
+1. Scaling the integration of human feedback.
+2. Ensuring long-term sustainability and ethical considerations.
+3. Making the system accessible for a broader audience.
 
-Of course, there may be a lot I don't see, and you have a lot of plans and big things coming, so feel free to take what’s helpful and leave the rest!
+### 1. Scaling Human Feedback Integration
 
-### 1. Over-Reliance on AI as Differentiator
+One of CAPE's primary strengths is its ability to incorporate human feedback into AI workflows, which enhances the accuracy and context richness of results. However, scaling this integration can be difficult, particularly as workflows become more complex. The challenge is ensuring that AI systems are able to continuously learn from a diverse set of interactions and apply these insights in real-time, without overwhelming the user.
 
-The most helpful feature right now is the website data puller. It extracts customer segments and value props, which is genuinely useful. But:
+- For CAPE to be widely adopted, it’s crucial to streamline this feedback loop and ensure that it’s not too cumbersome for users to participate in.
 
-- I could replicate the same results if I used ChatGPT to pull data from my website and tell it to write me a blog post.
+* In its current form, the system requires multiple rounds of interaction between the AI and the user to clarify context. This can slow down decision-making processes and make the system feel less efficient than purely automated tools.
 
-* Saving and editing this data is helpful, but it's functionally similar to writing things down in a Google Doc or Notion.
+### 2. Ethical and Judgment Concerns
 
-AI can but should not be **solely** relied on to create final content
+As with any AI system, CAPE must be implemented with careful consideration of its ethical implications. While AI can dramatically speed up decision-making, it must not replace human judgment entirely. The balance between AI assistance and human decision-making is critical.
 
-- AI is not yet consistent enough to carry tone and intention across a full campaign.
+- I believe that, for many applications, AI systems like CAPE should augment human decision-making rather than replace it entirely. The potential risks of relying too heavily on AI without adequate human oversight—such as missing important nuances or failing to address ethical concerns—cannot be ignored.
 
-* Even with good prompt engineering. AI generated content is still generic and recognizable (just ask the college students that use it for essays)
-* It still needs the human touch of someone with skilled writing/marketing judgement to feel aligned and compelling.
-* Also, if everyone is generating content with AI, how does a brand stand out?
+* For example, CAPE uses human-in-the-loop interactions to fill context gaps, but how do we ensure that the system doesn't perpetuate biases or inadvertently introduce errors into the workflow?
 
-Like Niki said, right now the competition isn’t another SaaS — it’s just not using the tool.
-ChatGPT and Notion are free, and for many users, that’s “good enough.”
+### 3. Accessibility for a Broader Audience
 
-### 2. Friction in the UI
+While CAPE has the potential to be a powerful tool for AI practitioners and developers, making it accessible to a wider audience—especially non-technical users—remains a significant challenge.
 
-The most noticeable product pain is the number of fields and checkboxes users must complete before seeing value.
+- Simplifying the onboarding process and making it easier for users with varying levels of expertise to understand and interact with the system will be key to its long-term success.
 
-I get the intent: these forms act like a mini marketing coach, forcing clarity. I think that's really valuable!
-
-But from a UX perspective, it **feels like homework.**
-
-- The onboarding should emphasize what’s _required vs optional_.
-
-* There should be incentives tied to completing fields:
-  - Example, by filling out your USP "You increased campaign clarity by 30%!”\*
-* The system needs to reward and guide — not overwhelm.
-
-But the good news is that it's relatively straightfoward to fix this.
-
-### 3. Conscience Issues With AI Guidance
-
-For users with marketing knowledge, Amplifyo is genuinely helpful—it speeds up execution.
-But for a user with 0 marketing experience, I'm a bit skeptical and morally torn to present this tool to them.
-
-I personally wouldn’t feel comfortable letting AI run an **entire** marketing campaign.
-
-Even if the outcome looks good, the _possibility_ of offering false confidence bothers me. I myself wouldn’t let AI build a campaign for me without being heavily involved...and I wouldn’t feel right asking others to either.
-
-You’ve said it yourself: people don’t know where to start with marketing.
-
-- But they don’t just need to be told what to do. They need to understand **why.**
+* If we want to ensure CAPE is widely adopted, it’s essential to create an intuitive, user-friendly interface that guides users through the process of providing feedback and using AI-generated insights in a way that is both effective and efficient.
 
 # Recommendations
 
-In my judgement, Amplifyo must (1) be easier to onboard, and (2) give sound judgement.
+In my view, CAPE’s future hinges on both simplifying user engagement and ensuring that its outputs are consistently aligned with sound human judgment. Below are my recommendations for refining the system:
 
-### 1. Easier Onboarding
+### 1. Simplifying Onboarding and User Interaction
 
-- Consider just automatically importing their website in the beginning
-- Agressively cut down to text
-  - The tutorial is fun to read, but more wordy
+- **Streamline the Feedback Process:** Consider ways to simplify the way users provide feedback to the system. One potential solution is to reduce the number of prompts or rounds of interaction needed to fill context gaps. Fewer steps could help users maintain a sense of control over the process.
+- **Clarify What’s Required vs. Optional:** Onboarding should clearly indicate which steps are essential and which are optional. For instance, the system could highlight required context fields and provide users with a progress bar that shows their contribution to enhancing the AI’s understanding.
+- **Gamification of User Engagement:** Introduce incentives for users to contribute context, such as gamifying the feedback process. For example, users could receive a “clarity score” for each interaction, motivating them to engage further.
 
-* Agressively cut down on fields/forms
-  - In particular, the Sign Up page should really be like 3-4 fields
-  - Clarify what’s optional vs required
-  - Also, the Affliates, Investors and Media forms could be condensed into Contact Us, or be more hidden.
+### 2. Enhance Ethical Guidance and Human Judgment
 
-- Gamify or reward data entry (e.g. completion = increased clarity score)
-- Consider progressive disclosure (only show what's needed)
+Right now, CAPE provides AI-generated suggestions based on user feedback, but there is a need to integrate more **human judgment** in how the AI’s recommendations are applied. Here’s how I see the way forward:
 
-### 2. Clearer, Trustworthy Judgment
-
-Right now Amplifyo sits in a muddy middle. AI offers suggestions, but I wouldn't allow users to fully trust it.
-
-The way I see it, there are three paths forward:
 **Path 1: Lean Into Human Judgment**
-Simply lean into your consulting background and guide users on how to best use these tools **tailored to them**:
-
-- Easiest path because you already provide this somewhat
-- You have such deep and rich experience consulting already
-  But:
-- It's not very scalable
-- It risks just becoming another agency
+- Amplify human involvement by encouraging users to review and refine AI-generated outputs. Instead of relying on the AI to make final decisions, empower users with tools to fine-tune and adjust results based on their own expertise.
 
 **Path 2: Lean into Education**
-Make the user interface extremely easy to navigate, and become an education and planning platform for people with 0 marketing experience. Not to execute tasks, but to learn while doing:
-
-- Again, tap into your consulting experience
-- Make the platform feel like a guided course + planner, not just a tool
-- Idea: “here’s why this step matters,” not just “fill this in"
-- You not to far from having a platform to do this honestly.
-- Don't need to be as involved as Path 1
-  But:
-- Have to make content (but maybe this is a plus for you)
-- Must find way to keep people around, else churn rate will be high
-  Are you interested in being an interactive marketing school?
+- Create a learning environment where users can engage with CAPE’s recommendations and understand the reasoning behind each suggestion. This could take the form of a **guided course** integrated into the system, allowing users to learn while they interact with the tool.
 
 **Path 3: Lean Into Data + Statistical Feedback**
-Integrate with _everything_, and then leverage **hard statistical data** to provide Guidance
+- Focus on leveraging **data and statistics** to guide users. By integrating the system with existing data sources, CAPE could generate actionable insights based on historical data. For example, tracking the success of past AI interventions could provide users with meaningful recommendations for future workflows.
 
-- The most scalable and defendable path
-- Differentitate yourself from everyone by becoming the central hub for market performance
-- Leverage AI ethically by just helping you understand data you already have, not guiding blindly:
-  - Track post engagement
-  * Run A/B tests on CTA wording
-  * Recommend best timing/angles based on past results
-    But
-- This path is hard (maybe why no one is doing it)
-- Integrations are messy, and data standardization is no small feat.
-  What are the biggest barriers you’ve run into when thinking about integrations?
+# Final Thoughts
 
-If you want my opinion. I like path 2. If you're up for it, it's a good balance of scalability and differentiability without sacrificing the human touch. I think path 3 will be the "most successful" but do you **need** to run a billion dollar company?
+CAPE is a powerful tool that can significantly improve AI workflows, especially in multi-agent systems where context is vital. Its ability to dynamically fill context gaps with human feedback is a game-changer for AI development, but there’s still work to be done in refining the user experience and ensuring that human judgment remains an integral part of the process.
 
-## Final Thoughts
+I’m excited to present this work to AI communities at upcoming conferences like \textbf{NeurIPS 2025}, \textbf{IJCAI 2025}, and \textbf{EMNLP 2025}, and I look forward to continuing to refine CAPE with feedback from both users and researchers.
 
-Amplifyo is a genuinely cool product! There’s a solid foundation and a strong team behind it (you guys are really a great duo).
+Feel free to reach out with any thoughts or suggestions on how this framework can evolve!
 
-Again, feel free to take what you will.
-
-These notes are offered in the spirit of sharpening, not simply to be critical or pessimistic. I like what you stand for and want to see you succeed. I am super excited for what you have in store!

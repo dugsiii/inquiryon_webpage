@@ -2,7 +2,7 @@
 import React from "react";
 
 export const bubbleText: React.ReactNode[][][] = [
-  //   Stage 3 Bubble text
+  // Stage 3 Bubble text
   [
     [<p>Come up with a lesson plan</p>],
     [
@@ -12,10 +12,6 @@ export const bubbleText: React.ReactNode[][][] = [
       </p>,
       <p>
         1. What do you want the lesson to be about? <br />
-        2. Who is it for? (Age or Grade?) <br />
-        3. How long should it be? <br />
-        4. Is there anything specific you want them to learn or be able to do by
-        the end? 1. What do you want the lesson to be about? <br />
         2. Who is it for? (Age or Grade?) <br />
         3. How long should it be? <br />
         4. Is there anything specific you want them to learn or be able to do by
@@ -30,77 +26,94 @@ export const bubbleText: React.ReactNode[][][] = [
     ],
     [
       <p>
-        Thanks for sharing—that really helps! A few more questions would make
-        the plan even better. Would you like me to ask them, or get your lesson
-        plan now?
+        Thanks for sharing—that really helps! Here’s another question to make the
+        lesson plan even better:
       </p>,
+      <p>Would you prefer a mix of individual work and group activities?</p>,
+    ],
+    [
+      <p>I’d like to focus more on individual work.</p>,
     ],
     [
       <p>
-        Thanks for sharing—that really helps! A few more questions would make
-        the plan even better. Would you like me to ask them, or get your lesson
-        plan now?
+        Got it! Last question—do you want to include any online resources or
+        games in the lesson?
+      </p>,
+    ],
+    [
+      <p>Actually, I don’t want to answer any more questions right now.</p>,
+    ],
+    [
+      <p>
+        No problem! I’ll go ahead and create a lesson plan based on what you’ve
+        shared so far. Here it is!
       </p>,
     ],
   ],
 
-  //   Stage 3 Bubble text
-  [
-    [<p>Help me analyze quarterly earnings for a Fortune 500 company.</p>],
-    [
-      <p>
-        I’m missing a few key details to make this really clear and helpful.
-        Here’s what I still need:
-      </p>,
-      <p>
-        • Which Fortune 500 company do you want to look at? <br />• Do you have
-        a specific time period in mind (like Q1 2023), or need help picking one?
-        <br />• What kind of analysis are you looking for (like revenue, profit,
-        or market share)? <br />• How would you like it presented (a quick
-        summary, charts, tables, etc.)?
-      </p>,
-    ],
-    [
-      <p>
-        Apple, I want the earnings from the past 5 years. A line chart that
-        charts revenue, operating income, and net profit over time.
-      </p>,
-    ],
-    [
-      <p>
-        Got it! You’d like a line chart showing Apple’s revenue, operating
-        income, and net profit over the last five years to spot trends. Hang
-        tight while I pull that together!
-      </p>,
-    ],
-  ],
-
-  //   Stage 3 Bubble text
+  // Stage 2 Bubble text
   [
     [<p>Come up with a lesson plan</p>],
     [
-      <p>
-        To make a good lesson plan just for you, can you answer a few quick
-        questions?
-      </p>,
-      <p>
-        What do you want the lesson to be about? Who is it for? (Age or Grade?)
-        How long should it be? Is there anything specific you want them to learn
-        or be able to do by the end?
-      </p>,
+      <p>Which class would you like to generate the lesson for?</p>,
+      <ul>
+        <li>a) 4ENGB</li>
+        <li>b) 3MTHA</li>
+        <li>c) 3MTHB</li>
+      </ul>
+    ],
+    [
+      <p>b</p>,
     ],
     [
       <p>
-        Mathematics, 3rd Grade, 1 hour or less, and we are learning basic
-        division and times tables.
+        From your profile on this class, it seems it is a 3rd grade math class where they're currently learning basic division. I'll tailor the lesson plan based on that. Would you like to include any specific online resources or games in the lesson?
       </p>,
     ],
     [
-      <p>
-        Thanks for sharing—that really helps! A few more questions would make
-        the plan even better. Would you like me to ask them, or get your lesson
-        plan now?
-      </p>,
+      <p>No games, but I’d like to use a few worksheets.</p>,
+    ],
+    [
+      <p>Great! I’ll plan for a lesson with worksheets and individual exercises. Would you like to include a review section at the end of the lesson?</p>,
+    ],
+    [
+      <p>Yes, a review would be helpful.</p>,
+    ],
+    [
+      <p>Thanks for the details! I’ll go ahead and create the lesson plan based on what you’ve shared.</p>,
     ],
   ],
+
+  // Stage 3 Bubble text
+  [
+    [<p>Come up with a lesson plan</p>],
+    [
+      <p>Which class would you like to generate the lesson for?</p>,
+      <ul>
+        <li>a) 4ENGB</li>
+        <li>b) 3MTHA</li>
+        <li>c) 3MTHB</li>
+      </ul>
+    ],
+    [
+      <p>b) 3MTHA (3rd grade math)</p>,
+    ],
+    [
+      <p>
+        From your profile on this class, it seems it is a 3rd grade math class where they're currently learning basic division. With the growing emphasis on personalized learning, would you like to incorporate an online resource, such as a website that offers interactive math worksheets, allowing students to practice division at their own pace?
+      </p>,
+    ],
+    [
+      <p>No online resources, but I’d like to use printed worksheets instead.</p>,
+    ],
+    [
+      <p>Great! I’ll plan for a lesson with printed worksheets and individual exercises. Would you like to include a review section at the end of the lesson, perhaps discussing strategies for improving division understanding through visual methods?</p>,
+    ],
+    [
+      <p>Yes, a review focused on strategies using visual methods would be helpful.</p>,
+    ],
+    [
+      <p>Thanks for the details! I’ll go ahead and create the lesson plan based on what you’ve shared, integrating visual aids and methods to reinforce division concepts.</p>,
+    ],
+  ] 
 ];

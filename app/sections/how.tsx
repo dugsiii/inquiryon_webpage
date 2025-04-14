@@ -109,6 +109,7 @@ export default function How() {
           <div className="max-w-3xl mx-auto flex flex-col items-center gap-6">
             <h3 className="text-secondary sm:text-transparent">Demo Video</h3>
             <div className="w-full aspect-[3/2] bg-secondary z-10 rounded-md shadow-lg outline" />
+            <h3> Coming Soon</h3>
           </div>
         </div>
       </Section>

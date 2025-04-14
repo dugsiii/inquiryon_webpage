@@ -21,15 +21,17 @@ export default async function Updates() {
         <div className="grid gap-4 sm:gap-8 lg:gap-16 grid-cols-1 justify-center sm:grid-cols-2 xl:grid-cols-3">
           {posts.slice(0, 3).map((post) => (
             <div key={post.slug} className="flex flex-col items-center group">
-              <a
-                className="h-48 w-[312px] bg-gray-300 block"
-                href={`/blog/${post.slug}`}
-              />
-              <div className="flex flex-col px-2 py-2 items-center hover:text-hover group">
-                <Link
-                  className="text-2xl font-sans-header"
+               <a
+                  className="h-48 w-[312px] bg-gray-300 block"
                   href={`/blog/${post.slug}`}
                 >
+                  <img
+                    className="h-full w-full object-cover"
+                    src={post.imageUrl} // Assuming the post object contains an imageUrl field
+                  />
+                </a>
+              <div className="flex flex-col px-2 py-2 items-center text-center hover:text-hover group">
+                <Link className="text-2xl font-sans-header break-words" href={`/blog/${post.slug}`}>
                   {post.title}
                 </Link>
                 <p className="text-sm">{formatDate(post.date)}</p>

@@ -28,6 +28,7 @@ export default async function Updates() {
                   <img
                     className="h-full w-full object-cover"
                     src={post.imageUrl} // Assuming the post object contains an imageUrl field
+                    alt=""
                   />
                 </a>
               <div className="flex flex-col px-2 py-2 items-center text-center hover:text-hover group">

@@ -26,13 +26,13 @@ export const bubbleText: React.ReactNode[][][] = [
     ],
     [
       <p>
-        Thanks for sharing—that really helps! Here’s another question to make the
+        Thanks for sharing—that really helps! Here&#39;s another question to make the
         lesson plan even better:
       </p>,
       <p>Would you prefer a mix of individual work and group activities?</p>,
     ],
     [
-      <p>I’d like to focus more on individual work.</p>,
+      <p>I&#39;d like to focus more on individual work.</p>,
     ],
     [
       <p>
@@ -41,11 +41,11 @@ export const bubbleText: React.ReactNode[][][] = [
       </p>,
     ],
     [
-      <p>Actually, I don’t want to answer any more questions right now.</p>,
+      <p>Actually, I don&#39;t want to answer any more questions right now.</p>,
     ],
     [
       <p>
-        No problem! I’ll go ahead and create a lesson plan based on what you’ve
+        No problem! I&#39;ll go ahead and create a lesson plan based on what you&#39;ve
         shared so far. Here it is!
       </p>,
     ],
@@ -67,20 +67,20 @@ export const bubbleText: React.ReactNode[][][] = [
     ],
     [
       <p>
-        From your profile on this class, it seems it is a 3rd grade math class where they're currently learning basic division. I'll tailor the lesson plan based on that. Would you like to include any specific online resources or games in the lesson?
+        From your profile on this class, it seems it is a 3rd grade math class where they&#39;re currently learning basic division. I&#39;ll tailor the lesson plan based on that. Would you like to include any specific online resources or games in the lesson?
       </p>,
     ],
     [
-      <p>No games, but I’d like to use a few worksheets.</p>,
+      <p>No games, but I&#39;d like to use a few worksheets.</p>,
     ],
     [
-      <p>Great! I’ll plan for a lesson with worksheets and individual exercises. Would you like to include a review section at the end of the lesson?</p>,
+      <p>Great! I&#39;ll plan for a lesson with worksheets and individual exercises. Would you like to include a review section at the end of the lesson?</p>,
     ],
     [
       <p>Yes, a review would be helpful.</p>,
     ],
     [
-      <p>Thanks for the details! I’ll go ahead and create the lesson plan based on what you’ve shared.</p>,
+      <p>Thanks for the details! I&#39;ll go ahead and create the lesson plan based on what you&#39;ve shared.</p>,
     ],
   ],
 
@@ -100,20 +100,20 @@ export const bubbleText: React.ReactNode[][][] = [
     ],
     [
       <p>
-        From your profile on this class, it seems it is a 3rd grade math class where they're currently learning basic division. With the growing emphasis on personalized learning, would you like to incorporate an online resource, such as a website that offers interactive math worksheets, allowing students to practice division at their own pace?
+        From your profile on this class, it seems it is a 3rd grade math class where they&#39;re currently learning basic division. With the growing emphasis on personalized learning, would you like to incorporate an online resource, such as a website that offers interactive math worksheets, allowing students to practice division at their own pace?
       </p>,
     ],
     [
-      <p>No online resources, but I’d like to use printed worksheets instead.</p>,
+      <p>No online resources, but I&#39;d like to use printed worksheets instead.</p>,
     ],
     [
-      <p>Great! I’ll plan for a lesson with printed worksheets and individual exercises. Would you like to include a review section at the end of the lesson, perhaps discussing strategies for improving division understanding through visual methods?</p>,
+      <p>Great! I&#39;ll plan for a lesson with printed worksheets and individual exercises. Would you like to include a review section at the end of the lesson, perhaps discussing strategies for improving division understanding through visual methods?</p>,
     ],
     [
       <p>Yes, a review focused on strategies using visual methods would be helpful.</p>,
     ],
     [
-      <p>Thanks for the details! I’ll go ahead and create the lesson plan based on what you’ve shared, integrating visual aids and methods to reinforce division concepts.</p>,
+      <p>Thanks for the details! I&#39;ll go ahead and create the lesson plan based on what you&#39;ve shared, integrating visual aids and methods to reinforce division concepts.</p>,
     ],
   ] 
 ];

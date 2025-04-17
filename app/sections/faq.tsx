@@ -43,22 +43,30 @@ const faqText: FAQItemProps[] = [
   {
     question: "Does this work with any AI model?",
     answer:
-      "Yes! We’re compatible with any LLM, enhancing your conversations regardless of the underlying LLM you decide to use.",
+      `Yes, it's model-agnostic. The software sits within your workflow as an intermediary, guiding a 
+      question-and-answer process to enhance prompt quality. While it can work with any LLM, performance 
+      may vary depending on the model. `,
   },
   {
     question: "How is this different from a regular chatbot or AI model?",
     answer:
-      "Most AI models give answers directly, regardless if there’s imperfect or vague context given. In order to help your tools give the best customer experience, we sit between you and the user to clarify intent and give your model more context.",
+      `In any given LLM interaction, there is a constant struggle to provide relevent context to the model. 
+      There are methods we use to help such as RAG (Retrieval Augmented Generation) and Chain-of-Thoughts (CoT) 
+      to aid the model in generation. However, these methods fail to take the human into account. 
+      We provide a way to keep the human in the loop, always allowing the LLM to gather the context necessary to 
+      generate a response.`,
   },
   {
     question: "When will this come out?",
     answer:
-      "We’re working diligently to roll this produce out as soon as possible. But as you know, it’s difficult to give an exact release date. The best way to stay updated is to sign up for our newsletter.",
+      `We’re working diligently to roll this produce out as soon as possible. But as you know, it’s difficult to
+       give an exact release date. The best way to stay updated is to sign up for our newsletter.`,
   },
   {
     question: "How can I get early access?",
     answer:
-      "To maintain quality, we’re limiting our Beta to the first 300 businesses to sign up. To see if we’re still have space for your business, sign up here.",
+      `To maintain quality, we’re limiting our Beta to the first 15 businesses to sign up. To see if we’re 
+      still have space for your business, sign up here.`,
   },
 ];
 

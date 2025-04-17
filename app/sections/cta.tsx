@@ -15,7 +15,7 @@ export default function CTA() {
           <div className="flex flex-col items-center w-full">
             <div className="flex flex-col items-center md:items-start w-full md:flex-row gap-4 md:gap-12">
               <h1 className="w-fit text-left max-w-sm md:text-right text-4xl md:text-5xl lg:text-7xl">
-                Got Inquiries for Us?
+                Got Some Inquiries For Us?
               </h1>
               <div className="flex flex-col gap-4 w-full h-full max-w-sm">
                 {/* <p className="max-w-lg pt-8">

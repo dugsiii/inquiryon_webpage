@@ -8,7 +8,7 @@ import Section from "@/components/section";
 import FadeInOnScroll from "@/components/fadeInOnScroll";
 import { motion } from "framer-motion";
 import Pop from "@/components/ui/pop";
-
+import EmailSignup from './components/emailSignup';
 export default function Hero() {
   return (
     <Section>
@@ -24,26 +24,9 @@ export default function Hero() {
               <b>your LLM can respond with confidence</b>. Join the waitlist*
               for early access and start building context-aware AI today!
             </p>
-            <div className="flex flex-col gap-1">
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md">
-                <Input
-                  id="email-input"
-                  type="email"
-                  placeholder="Email"
-                ></Input>
-                <Button
-                  variant="blue"
-                  size="lg"
-                  className="text-lg font-semibold"
-                  onClick={scrollToEmail}
-                >
-                  Start Building!
-                </Button>
-              </div>
-              <p className="text-input-text px-2 text-xs">
-                *Early access is limited—claim your spot now.
-              </p>
-            </div>
+            <section className="your-section-style">
+              <EmailSignup />
+            </section>
           </div>
         </FadeInOnScroll>
         <motion.div

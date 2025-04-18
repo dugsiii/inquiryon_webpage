@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // /app/api/send-email/route.ts
 import { Resend } from 'resend';
 import { EmailTemplate } from '@/components/email-template'; // adjust if your path is different

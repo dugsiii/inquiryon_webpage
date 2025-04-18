@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { scrollToEmail } from "@/lib/utils";
+//import { scrollToEmail } from "@/lib/utils";
 import Section from "@/components/section";
 import FadeInOnScroll from "@/components/fadeInOnScroll";
 import { motion } from "framer-motion";

@@ -39,7 +39,14 @@ export function FAQItem({ question, answer }: FAQItemProps) {
   );
 }
 
-const faqText: FAQItemProps[] = [
+const faqText: FAQItemProps[] = [  
+    {
+    question: "Who is this built for?",
+    answer:
+      `Whether you're already building with LLMs or just starting to explore AI, this is for you. 
+      For technical teams, it boosts performance by improving context and reducing vague inputs. 
+      For newcomers, it helps you integrate AI into your workflow with clarity, structure, and confidence.`,
+  },
   {
     question: "Does this work with any AI model?",
     answer:
@@ -59,15 +66,10 @@ const faqText: FAQItemProps[] = [
   {
     question: "When will this come out?",
     answer:
-      `We’re working diligently to roll this produce out as soon as possible. But as you know, it’s difficult to
-       give an exact release date. The best way to stay updated is to sign up for our newsletter.`,
+      `We’re working diligently to roll this product out as soon as possible. But as you know, it’s difficult to
+       give an exact release date. The best way to stay updated is to sign up for our waitlist.`,
   },
-  {
-    question: "How can I get early access?",
-    answer:
-      `To maintain quality, we’re limiting our Beta to the first 15 businesses to sign up. To see if we’re 
-      still have space for your business, sign up here.`,
-  },
+
 ];
 
 export default function FAQ() {

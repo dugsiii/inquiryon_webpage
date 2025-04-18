@@ -10,6 +10,8 @@ export async function POST(req: NextRequest) {
     const { email, message } = await req.json();
 
     if (!email || !message) {
+      console.error('email: ', email);
+      console.error('message: ', message);
       return NextResponse.json({ error: 'Missing email or message' }, { status: 400 });
     }
 

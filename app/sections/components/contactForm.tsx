@@ -20,7 +20,7 @@ export default function ContactForm() {
       await fetch('/api/contact-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, message }),
       });
       setSent(true);
       setEmail('');

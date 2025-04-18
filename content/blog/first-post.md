@@ -1,7 +1,7 @@
 ---
 title: "CAPE: A Path to Context-Aware AI Agents"
 slug: "cape-framework"
-date: "2025-04-25"
+date: "2025-02-3"
 imageUrl: "/cape-framework.png"
 summary: "Exploring the CAPE framework and its potential in enhancing AI agent performance."
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Why AI Still Needs People"
 slug: "why-ai-needs-people"
-date: "2025-04-18"
+date: "2025-03-23"
 imageUrl: "/Why_AI_Needs_People.png"
 summary: "Human-in-the-loop design isn’t just nice to have—it’s essential."
 ---

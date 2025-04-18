@@ -1,37 +1,37 @@
 ---
-title: "My Secondy Post"
-slug: "first-post"
-date: "2025-02-25"
-summary: "Amplifyo Suggestions"
+title: "Why AI Still Needs People"
+slug: "why-ai-needs-people"
+date: "2025-04-18"
+imageUrl: "/Why_AI_Needs_People.png"
+summary: "Human-in-the-loop design isn’t just nice to have—it’s essential."
 ---
 
-# Inquiryon Contract Review
+# Why AI Still Needs People
 
-Looks good! Main thing is that since I'm doing custom drawings, I want to maintain ownership of those (I'm very stingy about that in all my contracts lol).
-Also want to define the exact scope of the project and the deliverables needed to fulfill the Partnership.
+AI has come a long way, especially with large language models (LLMs) that can write, analyze, and even reason. But for all their capabilities, these models are still far from perfect. They hallucinate, they misinterpret vague prompts, and they often fail when context is missing or assumed. That’s not a small bug—it’s a fundamental limit.
 
-### Contract Review
+### Where LLMs Fall Short
 
-- Article A: let's define the scope of Services. Here's my idea (note the exclusion of Figma or sketches/supporting documents in final deliverable):
+- **Hallucination**: LLMs generate confident but false information when the training data isn’t enough to fill in the blanks.
+- **Vague Inputs**: When a user isn’t sure what to ask, the AI has to guess. And it often guesses wrong.
+- **Missing Context**: Without a shared understanding of the situation or user intent, even the smartest model will fumble.
 
-```
-Consultant will provide design and creative support for the Company’s web presence, including:
-* Branding definition and style guidelines
-* Development of an interactive prototype using Figma
-* Copywriting services for on-site text content
-* Creation of custom illustrations and visual assets for web use
-* Frontend development and coding of the actual website
-* Ongoing collaboration with the Founder to refine and iterate on visual concepts and execution
-Consultant agrees to deliver **the final code** for the website landing page, along with all relevant front-end assets, as well as a Company branding guideline, and hereby grants the Company the right to use, publish, and modify such deliverables as needed, subject to the IP ownership terms outlined in this Agreement.
-```
+This isn't a slight against AI—it's just reality. These models don't "know" in the human sense. They predict patterns. That makes them powerful, but brittle.
 
-- 2a + 2e:
-  - (very important) Retain **full ownership** for any **original drawings/illustrations and sketches** that I create for this project (should just be like 4 or 5 drawings) excluding logo and branding elements. It will **not be a part of the Company IP** nor be owned despite being a part of the deliverables. I'm just drawing these for fun, so don't want to be giving it away.
-  - (less important) Figma file will be under IP, but since it is not under deliverables, it is still under my ownership. Idk. Can you write this in somehow?
-  - Note: Logo and Branding (+branding guideline) will under IP and your ownership
-  - Note: Code itself will be under IP and your ownership
-- 2c: Let's just keep it at "during period of Relationship"
-- 2f: (very important) **Perpetual, non-exclusive right** to showcase my **all** work (Figma, drawings, logo, sketches, branding, website screenshots, and code repositories etc.) for **portfolio and self-promotional purposes** in all forms of media. Not just for one year.
-- 4: lol I just thought this section was funny
-- 8: note to make sure we incorporate anything about my drawings not being under the IP here
-- If you wanted to include a due date that would be fine too....but it's ok if not. I'm on a personal time limit anyways (the time limit of always being on the grind heh)
+### Human-in-the-Loop: A Fix, Not a Patch
+
+That’s where human-in-the-loop (HITL) workflows come in. By introducing checkpoints, feedback loops, or even just well-placed clarifying questions, we can drastically improve both the relevance and accuracy of AI outputs.
+
+Some examples:
+
+- **Content Generation**: Rather than letting AI draft blindly, a human guides the outline and tone. The result? Better voice, better clarity.
+- **Customer Support**: An AI triages and responds to common issues, but escalates unclear or nuanced cases to a human rep—keeping quality high and costs low.
+- **Healthcare AI**: LLMs can summarize patient notes or suggest treatments, but a doctor still reviews everything. That hybrid model reduces workload without compromising care.
+
+### Why Inquiryon Is Built This Way
+
+We believe AI isn’t meant to replace people—it’s meant to partner with them. That’s why our platform is designed from the ground up to invite human context into every step of the process. If someone doesn’t know what to ask, our system helps them figure it out. If the model’s not sure, we let it *ask* before it acts.
+
+It’s a two-way street: people helping AI help people.
+
+In a world of automation overload, **we’re building tools that keep humans in the loop—not out of it.**

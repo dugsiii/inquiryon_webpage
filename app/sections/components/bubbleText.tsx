@@ -185,7 +185,46 @@ export const bubbleText: React.ReactNode[][][] = [
       <p>Yes, a review focused on strategies using visual methods would be helpful.</p>,
     ],
     [
-      <p>Thanks for the details! I&#39;ll go ahead and create the lesson plan based on what you&#39;ve shared, integrating visual aids and methods to reinforce division concepts.</p>,
-    ],
+      <p>
+        Thanks for the details! I&#39;ll go ahead and create the lesson plan based on what you&#39;ve shared, integrating visual aids and methods to reinforce division concepts.
+      </p>,
+      <p>
+        <strong>Lesson Plan: Understanding Division Through Visual Strategies</strong><br /><br />
+    
+        <u>Class:</u> 3MTHA (3rd Grade Math)<br />
+        <u>Topic:</u> Basic Division Concepts<br />
+        <u>Duration:</u> 1 Hour<br /><br />
+    
+        <strong>Objective:</strong><br />
+        Students will understand basic division as equal grouping and be able to solve problems using visual methods and worksheets.<br /><br />
+    
+        <strong>Materials Needed:</strong><br />
+        - Printed division worksheets<br />
+        - Counters (beans, cubes, or small items)<br />
+        - Visual division charts<br />
+        - Whiteboard and markers<br /><br />
+    
+        <strong>Lesson Flow:</strong><br />
+        <u>1. Warm-Up (5 mins)</u><br />
+        - Quick multiplication recap using a few verbal problems<br /><br />
+    
+        <u>2. Introduction (10 mins)</u><br />
+        - Explain division as “sharing” or “grouping”<br />
+        - Show examples using counters and draw visuals on the board<br /><br />
+    
+        <u>3. Practice (25 mins)</u><br />
+        - Students complete printed worksheets individually<br />
+        - Worksheets include visual aids like grouping circles and number lines<br />
+        - Teacher circulates to help with strategies<br /><br />
+    
+        <u>4. Review & Reflection (15 mins)</u><br />
+        - Group discussion of problem-solving strategies<br />
+        - Reinforce visual tools: number lines, equal groups, arrays<br /><br />
+    
+        <strong>Assessment:</strong><br />
+        - Accuracy of worksheet responses<br />
+        - Verbal explanation of how students approached the problems
+      </p>,
+    ]
   ] 
 ];

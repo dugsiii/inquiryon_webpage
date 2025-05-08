@@ -50,18 +50,20 @@ const faqText: FAQItemProps[] = [
   {
     question: "Does this work with any AI model?",
     answer:
-      `Yes, it's model-agnostic. The software sits within your workflow as an intermediary, guiding a 
-      question-and-answer process to enhance prompt quality. While it can work with any LLM, performance 
-      may vary depending on the model. `,
+      `Yes, it's model-agnostic. The CAPE software framework sits within your web application workflow as an 
+      intermediary, guiding a structured question-and-answer process to enhance prompt quality and gather 
+      necessary context. While it can work with any LLM, performance may vary depending on the model and the use case.`,
   },
   {
     question: "How is this different from a regular chatbot or AI model?",
     answer:
-      `In any given LLM interaction, there is a constant struggle to provide relevent context to the model. 
-      There are methods we use to help such as RAG (Retrieval Augmented Generation) and Chain-of-Thoughts (CoT) 
-      to aid the model in generation. However, these methods fail to take the human into account. 
-      We provide a way to keep the human in the loop, always allowing the LLM to gather the context necessary to 
-      generate a response.`,
+      `In typical LLM interactions, there's a constant struggle to provide relevant context. While techniques 
+      like Retrieval-Augmented Generation (RAG) and Chain-of-Thought (CoT) prompting help guide responses, they 
+      often overlook the human user as a dynamic source of context. We address this with CAPE: a structural 
+      framework designed to support Human-in-the-Loop (HITL) interactions. CAPE enables the LLM to ask targeted 
+      clarifying questions and adapt its prompts in real time, allowing it to actively gather the right context
+       from the user. This results in more accurate, aligned, and context-aware responses, bridging the gap between 
+       static prompts and dynamic human intent.`,
   },
   {
     question: "When will this come out?",

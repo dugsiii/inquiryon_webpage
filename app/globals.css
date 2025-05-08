@@ -114,3 +114,45 @@ html {
     @apply leading-relaxed;
   }
 }
+
+/* Elegant light scrollbar with arrows */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #999 transparent; /* thumb, track */
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 10px;
+  border: 2px solid transparent; /* for a hollow effect */
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-button {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 2px;
+}
+
+*::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background: url("data:image/svg+xml;utf8,<svg fill='gray' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M7 14l5-5 5 5z'/></svg>") no-repeat center;
+  background-size: 60%;
+}
+
+*::-webkit-scrollbar-button:single-button:vertical:increment {
+  background: url("data:image/svg+xml;utf8,<svg fill='gray' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat center;
+  background-size: 60%;
+}

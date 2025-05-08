@@ -11,16 +11,16 @@ export default function How() {
     {
       stage: "Q&A",
       title: "Local Context",
-      text: "Integrate lightweight Q&A capabilities into your LLM that allow it to ask simple follow-up questions based solely on the current conversation.",
+      text: "Integrate lightweight Q&A capabilities  into your AI agent or Web application, allowing it to ask simple follow-up questions based solely on the current conversation.",
     },
     {
       stage: "Context",
       title: "Context-aware intelligence",
-      text: "Go beyond single-session prompts. Leverage environmental context to help your LLM understand users better and respond with greater precision.",
+      text: "Go beyond single-session prompts. Leverage environmental context to help your agent or Web application understands users better and respond with greater precision.",
     },
     {
       stage: "CAPE",
-      title: "Domain-Level Intelligence",
+      title: "Domain-Specific Knowledge",
       text: "Understand more than just the context, understand the problem space. Tap into domain knowledge and group context, ask expert level questions and give amazing results.",
     },
   ];

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { bubbleText } from "./bubbleText";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -60,31 +60,39 @@ export function BubbleCluster({
 
 export default function ChatBox({ stage }: { stage: number }) {
   const bubbles = bubbleText[stage] ?? [];
-
+  const scrollRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = 0;
+    }
+  }, [stage]);
   return (
-    <div className="w-full mx-auto py-8 md:py-12 px-4 md:px-8 flex flex-col rounded-lg gap-8 md:gap-6 bg-dark-grey transition-all">
-      <AnimatePresence mode="wait">
-        {bubbles.map((cluster, index) => (
-          <motion.div
-            key={`${stage}-${index}`}
-            initial={{ opacity: 0, y: 30 + 10 * index }}
-            whileInView={{ opacity: 1, y: 0 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{
-              opacity: 0,
-              x: index % 2 === 0 ? 20 : -20,
-              transition: {
-                duration: 0.3,
-              },
-            }}
-            transition={{ duration: 0.2 + 0.2 * index }}
-          >
-            <BubbleCluster leftAligned={index % 2 !== 0}>
-              {React.Children.toArray(cluster)}
-            </BubbleCluster>
-          </motion.div>
-        ))}
-      </AnimatePresence>
+    <div className="w-full b-auto  py-8 md:py-12 px-4 md:px-8 flex flex-col rounded-lg gap-8 md:gap-6 bg-dark-grey transition-all">
+      <div ref={scrollRef} className="max-h-200 overflow-y-auto">
+        <AnimatePresence mode="wait">
+          {bubbles.map((cluster, index) => (
+            <motion.div
+              key={`${stage}-${index}`}
+              className="mb-2"
+              initial={{ opacity: 0, y: 5 + 5 * index }}
+              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{
+                opacity: 0,
+                x: index % 2 === 0 ? 20 : -20,
+                transition: {
+                  duration: 0.3,
+                },
+              }}
+              transition={{ duration: 0.2 + 0.2 * index }}
+            >
+              <BubbleCluster leftAligned={index % 2 !== 0}>
+                {React.Children.toArray(cluster)}
+              </BubbleCluster>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

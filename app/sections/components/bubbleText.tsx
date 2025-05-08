@@ -168,63 +168,68 @@ export const bubbleText: React.ReactNode[][][] = [
       </ul>
     ],
     [
-      <p>b) 3MTHA (3rd grade math)</p>,
+      <p>b</p>,
     ],
     [
       <p>
-        From your profile on this class, it seems it is a 3rd grade math class where they&#39;re currently learning basic division. With the growing emphasis on personalized learning, would you like to incorporate an online resource, such as a website that offers interactive math worksheets, allowing students to practice division at their own pace?
+        From your profile on this class, it seems it is a 3rd grade math course where students are currently learning basic division.
+      </p>,
+      <p>Children at this level often struggle with understanding division as equal grouping, especially when transitioning from multiplication.
+        Would you like to incorporate visual learning aids, such as manipulatives or diagrams, to help reinforce the concept?
       </p>,
     ],
     [
-      <p>No online resources, but I&#39;d like to use printed worksheets instead.</p>,
-    ],
-    [
-      <p>Great! I&#39;ll plan for a lesson with printed worksheets and individual exercises. Would you like to include a review section at the end of the lesson, perhaps discussing strategies for improving division understanding through visual methods?</p>,
-    ],
-    [
-      <p>Yes, a review focused on strategies using visual methods would be helpful.</p>,
+      <p>Yes, that sounds helpful. Let’s use visual aids like counters and grouping diagrams.</p>,
     ],
     [
       <p>
-        Thanks for the details! I&#39;ll go ahead and create the lesson plan based on what you&#39;ve shared, integrating visual aids and methods to reinforce division concepts.
+        Great! I’ll include those in the lesson. One more question: would you like to include a review section at the end of the lesson?
+        This could help reinforce strategies using visuals and ensure students are confidently applying what they’ve learned.
+      </p>,
+    ],
+    [
+      <p>Yes, a review section would be helpful for solidifying their understanding.</p>,
+    ],
+    [
+      <p>
+        Thanks for the details! I&#39;ll go ahead and create the lesson plan based on what you&#39;ve shared, with a focus on visual aids and review.
       </p>,
       <p>
         <strong>Lesson Plan: Understanding Division Through Visual Strategies</strong><br /><br />
-    
+  
         <u>Class:</u> 3MTHA (3rd Grade Math)<br />
         <u>Topic:</u> Basic Division Concepts<br />
         <u>Duration:</u> 1 Hour<br /><br />
-    
+  
         <strong>Objective:</strong><br />
         Students will understand basic division as equal grouping and be able to solve problems using visual methods and worksheets.<br /><br />
-    
+  
         <strong>Materials Needed:</strong><br />
         - Printed division worksheets<br />
         - Counters (beans, cubes, or small items)<br />
         - Visual division charts<br />
         - Whiteboard and markers<br /><br />
-    
+  
         <strong>Lesson Flow:</strong><br />
         <u>1. Warm-Up (5 mins)</u><br />
         - Quick multiplication recap using a few verbal problems<br /><br />
-    
+  
         <u>2. Introduction (10 mins)</u><br />
         - Explain division as “sharing” or “grouping”<br />
-        - Show examples using counters and draw visuals on the board<br /><br />
-    
+        - Use counters and draw visual diagrams to demonstrate<br /><br />
+  
         <u>3. Practice (25 mins)</u><br />
-        - Students complete printed worksheets individually<br />
-        - Worksheets include visual aids like grouping circles and number lines<br />
-        - Teacher circulates to help with strategies<br /><br />
-    
+        - Students complete printed worksheets with visual aids<br />
+        - Teacher circulates to support with individual strategies<br /><br />
+  
         <u>4. Review & Reflection (15 mins)</u><br />
-        - Group discussion of problem-solving strategies<br />
-        - Reinforce visual tools: number lines, equal groups, arrays<br /><br />
-    
+        - Discuss problem-solving methods as a group<br />
+        - Reinforce strategies using number lines and grouping visuals<br /><br />
+  
         <strong>Assessment:</strong><br />
-        - Accuracy of worksheet responses<br />
-        - Verbal explanation of how students approached the problems
+        - Accuracy of worksheet answers<br />
+        - Verbal reflection on strategies used
       </p>,
     ]
-  ] 
+  ]  
 ];

@@ -108,8 +108,18 @@ export default function How() {
         <div className="absolute -bottom-32 sm:-bottom-48 w-full px-4 left-1/2 transform -translate-x-1/2 z-10">
           <div className="max-w-3xl mx-auto flex flex-col items-center gap-6">
             <h3 className="text-secondary sm:text-transparent">Demo Video</h3>
-            <div className="w-full aspect-[3/2] bg-secondary z-10 rounded-md shadow-lg outline" />
-            <h3> Coming Soon</h3>
+            <div className="w-full aspect-[3/2] bg-secondary z-10 rounded-md shadow-lg outline overflow-hidden">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/3fHBW1esH98"
+                title="Demo Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
           </div>
         </div>
       </Section>

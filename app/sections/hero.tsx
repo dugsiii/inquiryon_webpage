@@ -14,14 +14,13 @@ export default function Hero() {
         <FadeInOnScroll>
           <div className="flex flex-col my-auto max-w-lg gap-6">
             <h1 className="text-4xl md:text-5xl lg:text-7xl leading-tight lg:leading-20">
-            AI That Earns <Pop>Trust</Pop> by Asking First
+            AI That Earns Your <Pop>Trust</Pop>
             </h1>
-            <p className="text-[1.075rem]">
-              AI shouldn’t guess, especially when trust is on the line. <br />
-              Our HITL companion steps in to <b>ask first and keep your AI safe</b>. 
-              Join the waitlist* for early access and start building AI you can trust today!
-            </p>
-
+          <p className="text-[1.075rem]">
+            AI shouldn’t run unchecked. <br />
+            Our human-in-the-loop agent <b>keeps you involved and in control</b>, adding the oversight needed for safe, trustworthy results.  
+            Join the waitlist* for early access and start building AI you can trust today!
+          </p>
             <section className="your-section-style">
               <EmailSignup />
             </section>

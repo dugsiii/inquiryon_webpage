@@ -44,7 +44,7 @@ export default function EmailSignup() {
           onClick={handleEmailSignup}
           disabled={loading}
         >
-          {loading ? 'Sending...' : sent ? 'Sent!' : 'Start Building!'}
+          {loading ? 'Sending...' : sent ? 'Sent!' : 'Build With Trust'}
         </Button>
       </div>
       <p className="text-input-text px-2 text-xs">

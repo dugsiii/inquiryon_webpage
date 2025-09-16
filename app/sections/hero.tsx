@@ -14,14 +14,14 @@ export default function Hero() {
         <FadeInOnScroll>
           <div className="flex flex-col my-auto max-w-lg gap-6">
             <h1 className="text-4xl md:text-5xl lg:text-7xl leading-tight lg:leading-20">
-              AI That Knows What to <Pop>Ask</Pop>
+            AI That Earns <Pop>Trust</Pop> by Asking First
             </h1>
             <p className="text-[1.075rem]">
-              Users are vague. Your AI doesn’t have to be. <br />
-              We fill the context gap so{" "}
-              <b>your LLM can respond with confidence</b>. Join the waitlist*
-              for early access and start building context-aware AI today!
+              AI shouldn’t guess, especially when trust is on the line. <br />
+              Our HITL companion steps in to <b>ask first and keep your AI safe</b>. 
+              Join the waitlist* for early access and start building AI you can trust today!
             </p>
+
             <section className="your-section-style">
               <EmailSignup />
             </section>

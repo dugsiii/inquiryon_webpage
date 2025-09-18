@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { bubbleText } from "./bubbleText";
+import { bubbleText } from "../../../lib/content/bubble-text";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Bubble({

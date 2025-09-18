@@ -4,6 +4,7 @@ import { Agent, agents } from "../../../../lib/content/agents-list";
 import { useMediaQuery } from "@/lib/hooks/use-media-query";
 import { chunkArray } from "@/lib/chunk-array";
 import { AnimatePresence, motion } from "framer-motion";
+import { FaStar } from "react-icons/fa";
 
 function AgentsRow({
   items,
@@ -36,8 +37,9 @@ function AgentsRow({
                     ? "bg-accent/30 drop-shadow-[0_0_2px_var(--accent)]" // selected
                     : isNotSelected
                       ? "bg-secondary/10 opacity-50 " // others when one is selected
-                      : "bg-secondary/5 hover:bg-accent/20 hover:scale-102 hover:drop-shadow-[0_0_2px_var(--accent)]" // none selected
+                      : "bg-secondary/5 hover:bg-accent/20 hover:drop-shadow-[0_0_2px_var(--accent)]" // none selected
                 }
+                ${agent.highlight ? "ring-4 ring-[var(--accent)]/80" : ""}
                 min-h-[164px]
               `}
               aria-label={`${agent.name}, category: ${agent.category}`}
@@ -49,16 +51,28 @@ function AgentsRow({
                 text-5xl  transition mb-4 mt-4 
                 group-hover:drop-shadow-[0_0_4px_var(--accent)] 
                 ${isExpanded ? "drop-shadow-[0_0_8px_var(--accent)]" : ""}
+                ${agent.highlight ? "" : "opacity-90"}
               `}
               >
                 {agent.icon}
               </div>
 
-              <div className="self-center flex flex-col items-center flex-grow">
+              <div
+                className={`self-center flex flex-col items-center flex-grow `}
+              >
                 <p className="text-xs opacity-80 font-bold">{agent.category}</p>
                 <h4 className="font-medium text-lg md:text-2xl lg:text-2xl ">
                   {agent.name}
                 </h4>
+                {agent.highlight && (
+                  <p
+                    className="flex flex-row items-center gap-1
+                  px-3 text-xs mt-2 font-bold bg-accent text-primary rounded-full "
+                  >
+                    <FaStar className="opacity-80" />
+                    Featured
+                  </p>
+                )}
               </div>
             </button>
           );
@@ -82,17 +96,21 @@ function AgentsRow({
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className="p-4 mt-4 "
+                className="p-4 mt-4 flex flex-col"
               >
-                <p className="mb-2 font-semibold">
+                <p className="mb-6 font-semibold">
                   {expandedAgent.description}
                 </p>
                 {expandedAgent.link && (
                   <Link
                     href={expandedAgent.link}
-                    className="text-primary underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={`Explore ${expandedAgent.category} Agent in a new tab`}
+                    className="self-end text-primary font-sans-header bg-accent px-5 py-1 
+                    cursor-pointer rounded-md transition hover:bg-secondary"
                   >
-                    Visit {expandedAgent.name}
+                    Explore Agent!
                   </Link>
                 )}
               </motion.div>

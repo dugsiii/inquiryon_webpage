@@ -1,30 +1,28 @@
 "use client";
-import React, { useState } from "react";
 import Section from "@/components/section";
-import ChatBox from "./components/chatBox";
 import FadeInOnScroll from "@/components/fadeInOnScroll";
 import AgentsDisplay from "./components/agents/agentsDisplay";
 
 export default function How() {
-  const [selectedStage, setSelectedStage] = useState(0);
+  // const [selectedStage, setSelectedStage] = useState(0);
 
-  const stepsText = [
-    {
-      stage: "Q&A",
-      title: "Local Context",
-      text: "Integrate lightweight Q&A capabilities  into your AI agent or Web application, allowing it to ask simple follow-up questions based solely on the current conversation.",
-    },
-    {
-      stage: "Context",
-      title: "Context-aware intelligence",
-      text: "Go beyond single-session prompts. Leverage environmental context to help your agent or Web application understands users better and respond with greater precision.",
-    },
-    {
-      stage: "CAPE",
-      title: "Domain-Specific Knowledge",
-      text: "Understand more than just the context, understand the problem space. Tap into domain knowledge and group context, ask expert level questions and give amazing results.",
-    },
-  ];
+  // const stepsText = [
+  //   {
+  //     stage: "Q&A",
+  //     title: "Local Context",
+  //     text: "Integrate lightweight Q&A capabilities  into your AI agent or Web application, allowing it to ask simple follow-up questions based solely on the current conversation.",
+  //   },
+  //   {
+  //     stage: "Context",
+  //     title: "Context-aware intelligence",
+  //     text: "Go beyond single-session prompts. Leverage environmental context to help your agent or Web application understands users better and respond with greater precision.",
+  //   },
+  //   {
+  //     stage: "CAPE",
+  //     title: "Domain-Specific Knowledge",
+  //     text: "Understand more than just the context, understand the problem space. Tap into domain knowledge and group context, ask expert level questions and give amazing results.",
+  //   },
+  // ];
 
   return (
     <>

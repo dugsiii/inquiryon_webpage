@@ -1,25 +1,34 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { Agent, agents } from "../../../../lib/content/agents-list";
+import {
+  Agent,
+  agents,
+  highlightedAgents,
+} from "../../../../lib/content/agents-list";
 import { useMediaQuery } from "@/lib/hooks/use-media-query";
 import { chunkArray } from "@/lib/chunk-array";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
+import Image from "next/image";
+
+const ICON_SIZE = 72;
 
 function AgentsRow({
   items,
   expandedId,
   setExpandedId,
+  className,
 }: {
   items: Agent[];
   expandedId: string | null;
   setExpandedId: (id: string | null) => void;
+  className?: string;
 }) {
   // Check if any agent in this row is expanded
   const expandedAgent = items.find((a) => a.id === expandedId);
 
   return (
-    <div className="mb-6">
+    <div className={`mb-6 ${className}`}>
       <div className="flex flex-row gap-6">
         {items.map((agent) => {
           const isExpanded = expandedId === agent.id;
@@ -30,7 +39,7 @@ function AgentsRow({
               key={agent.id}
               onClick={() => setExpandedId(isExpanded ? null : agent.id)}
               className={`
-                flex-1 min-w-[45%] lg:min-w-[30%] flex flex-col items-center px-6 py-4 
+                flex-1 min-w-[45%] lg:min-w-[30%] flex flex-col items-center px-4 py-8 
                 rounded-lg group transition cursor-pointer 
                 ${
                   isExpanded
@@ -48,20 +57,26 @@ function AgentsRow({
             >
               <div
                 className={`
-                text-5xl  transition mb-4 mt-4 
+                text-5xl  transition mb-4
                 group-hover:drop-shadow-[0_0_4px_var(--accent)] 
                 ${isExpanded ? "drop-shadow-[0_0_8px_var(--accent)]" : ""}
                 ${agent.highlight ? "" : "opacity-90"}
               `}
               >
-                {agent.icon}
+                <Image
+                  src={agent.imageSrc}
+                  alt={`Icon for ${agent.category} Agent`}
+                  height={ICON_SIZE}
+                  width={ICON_SIZE}
+                  className="group-hover:scale-105 transition-transform duration-150"
+                />
               </div>
 
               <div
                 className={`self-center flex flex-col items-center flex-grow `}
               >
                 <p className="text-xs opacity-80 font-bold">{agent.category}</p>
-                <h4 className="font-medium text-lg md:text-2xl lg:text-2xl ">
+                <h4 className="font-medium text-lg md:text-xl ">
                   {agent.name}
                 </h4>
                 {agent.highlight && (
@@ -70,7 +85,7 @@ function AgentsRow({
                   px-3 text-xs mt-2 font-bold bg-accent text-primary rounded-full "
                   >
                     <FaStar className="opacity-80" />
-                    Featured
+                    Essentials
                   </p>
                 )}
               </div>
@@ -137,26 +152,40 @@ export default function AgentsDisplay() {
   const remainingAgents = agents.length - MAX_ROWS * chunkSize;
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4">
-      {visibleRows.map((items, idx) => (
+    <>
+      <div className="flex flex-col items-center w-full">
+        <h2 className="text-4xl mb-8">Powered By:</h2>
         <AgentsRow
-          key={idx}
-          items={items}
+          items={[highlightedAgents]}
           expandedId={expandedId}
           setExpandedId={setExpandedId}
+          className="w-full md:w-2xl px-4"
         />
-      ))}
+      </div>
 
-      {rows.length > MAX_ROWS && (
-        <div className="flex justify-center mt-4">
-          <button
-            onClick={() => setShowAll((prev) => !prev)}
-            className="px-4 py-2 text-sm font-medium bg-secondary/20 rounded-md hover:bg-secondary/30 transition"
-          >
-            {showAll ? "Show Less" : `Show More (${remainingAgents})`}
-          </button>
-        </div>
-      )}
-    </div>
+      <h3 className="text-2xl">Our other Agents:</h3>
+
+      <div className="w-full max-w-6xl mx-auto px-4">
+        {visibleRows.map((items, idx) => (
+          <AgentsRow
+            key={idx}
+            items={items}
+            expandedId={expandedId}
+            setExpandedId={setExpandedId}
+          />
+        ))}
+
+        {rows.length > MAX_ROWS && (
+          <div className="flex justify-center mt-4">
+            <button
+              onClick={() => setShowAll((prev) => !prev)}
+              className="px-4 py-2 text-sm font-medium bg-secondary/20 rounded-md hover:bg-secondary/30 transition"
+            >
+              {showAll ? "Show Less" : `Show More (${remainingAgents})`}
+            </button>
+          </div>
+        )}
+      </div>
+    </>
   );
 }

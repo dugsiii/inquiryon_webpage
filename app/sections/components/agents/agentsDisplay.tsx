@@ -45,7 +45,7 @@ function AgentsRow({
                   isExpanded
                     ? "bg-accent/30 drop-shadow-[0_0_2px_var(--accent)]" // selected
                     : isNotSelected
-                      ? "bg-secondary/10 opacity-50 " // others when one is selected
+                      ? "bg-secondary/10 opacity-70 " // others when one is selected
                       : "bg-secondary/5 hover:bg-accent/20 hover:drop-shadow-[0_0_2px_var(--accent)]" // none selected
                 }
                 ${agent.highlight ? "ring-4 ring-[var(--accent)]/80" : ""}
@@ -141,6 +141,7 @@ const MAX_ROWS = 6; // NOTE: for later if you have more agents and need to colla
 
 export default function AgentsDisplay() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [hitlExpanded, setHitlExpanded] = useState<string | null>(null);
   const [showAll, setShowAll] = useState(false);
 
   // decide chunk size based on screen size
@@ -157,8 +158,8 @@ export default function AgentsDisplay() {
         <h2 className="text-4xl mb-8">Powered By:</h2>
         <AgentsRow
           items={[highlightedAgents]}
-          expandedId={expandedId}
-          setExpandedId={setExpandedId}
+          expandedId={hitlExpanded}
+          setExpandedId={setHitlExpanded}
           className="w-full md:w-2xl px-4"
         />
       </div>

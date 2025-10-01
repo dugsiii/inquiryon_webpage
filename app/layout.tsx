@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     title: "Inquiryon",
-    description: "AI that refines prompts through questions.",
+    description: "AI that earns your trust.",
     images: "/opengraph-image.png",
   },
   icons: {

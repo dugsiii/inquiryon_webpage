@@ -14,14 +14,13 @@ export default function Hero() {
         <FadeInOnScroll>
           <div className="flex flex-col my-auto max-w-lg gap-6">
             <h1 className="text-4xl md:text-5xl lg:text-7xl leading-tight lg:leading-20">
-              AI That Knows What to <Pop>Ask</Pop>
+            AI That Earns Your <Pop>Trust</Pop>
             </h1>
-            <p className="text-[1.075rem]">
-              Users are vague. Your AI doesn’t have to be. <br />
-              We fill the context gap so{" "}
-              <b>your LLM can respond with confidence</b>. Join the waitlist*
-              for early access and start building context-aware AI today!
-            </p>
+          <p className="text-[1.075rem]">
+            AI shouldn’t run unchecked. <br />
+            Our human-in-the-loop agent <b>keeps you involved and in control</b>, adding the oversight needed for safe, trustworthy results.  
+            Join the waitlist* for early access and start building AI you can trust today!
+          </p>
             <section className="your-section-style">
               <EmailSignup />
             </section>

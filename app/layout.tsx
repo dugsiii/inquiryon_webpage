@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Inquiryon",
   },
   description:
-    "AI that knows what to ask. Refine user intent and unlock clarity.",
+    "AI that earns your trust.",
   keywords: [
     "AI intent refinement",
     "LLM",

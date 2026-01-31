@@ -101,22 +101,23 @@ export default function Features() {
         <SingleFeature
           title={
             <>
-              Unlock The
-              <Pop> Full Potential </Pop>
+              Deploy With
+              <Pop> Confidence </Pop>
             </>
           }
           image="/3.webp"
           imageAlt="Necklace with Final Gemstones set in the shape of the Inquiryon Logo."
         >
           <p>
-            When your AI has the right context and knows the right questions to
-            ask, it becomes more than just responsive.{" "}
-            <b>It becomes truly intelligent.</b>
+            When your agents are logged, audited, and supervised, they become
+            more than just autonomous.{" "}
+            <b>They become reliable.</b>
             <br />
             <br />
-            Our system <b>expands what’s possible</b> by enabling smarter
-            interactions, broader accessibility, and better results across a
-            wide range of use cases.
+            Our platform <b>expands what&apos;s possible</b> by giving you the
+            confidence to deploy agents at scale — knowing every action is
+            tracked, every decision is reviewable, and a human is always one
+            step away.
           </p>
         </SingleFeature>
       </div>

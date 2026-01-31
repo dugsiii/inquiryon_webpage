@@ -54,30 +54,19 @@ export function FAQItem({
 const faqText: { question: string; answer: string }[] = [
   {
     question: "Who is this built for?",
-    answer: `Whether you're already building with LLMs or just starting to explore AI, this is for you. 
-      For technical teams, it boosts performance by improving context and reducing vague inputs. 
-      For newcomers, it helps you integrate AI into your workflow with clarity, structure, and confidence.`,
+    answer: `Whether you're a team or an individual deploying AI agents, this is for you. If you need visibility into what your agents are doing, the ability to audit their decisions, and human oversight when it matters, our platform gives you the tools to deploy with confidence.`,
   },
   {
-    question: "Does this work with any AI model?",
-    answer: `Yes, it's model-agnostic. The CAPE software framework sits within your web application workflow as an 
-      intermediary, guiding a structured question-and-answer process to enhance prompt quality and gather 
-      necessary context. While it can work with any LLM, performance may vary depending on the model and the use case.`,
+    question: "Does this work with any AI agent or model?",
+    answer: `Yes, it's model-agnostic. Our platform sits as a layer on top of your existing agents, providing logging, auditing, and human-in-the-loop oversight regardless of the underlying model or framework.`,
   },
   {
-    question: "How is this different from a regular chatbot or AI model?",
-    answer: `In typical LLM interactions, there's a constant struggle to provide relevant context. While techniques 
-      like Retrieval-Augmented Generation (RAG) and Chain-of-Thought (CoT) prompting help guide responses, they 
-      often overlook the human user as a dynamic source of context. We address this with CAPE: a structural 
-      framework designed to support Human-in-the-Loop (HITL) interactions. CAPE enables the LLM to ask targeted 
-      clarifying questions and adapt its prompts in real time, allowing it to actively gather the right context
-       from the user. This results in more accurate, aligned, and context-aware responses, bridging the gap between 
-       static prompts and dynamic human intent.`,
+    question: "How is this different from other AI safety tools?",
+    answer: `Most safety tools focus on a single dimension — monitoring or guardrails. Our platform combines real-time logging, auditing, and human-in-the-loop intervention into one unified system, giving you full oversight without stitching together multiple solutions.`,
   },
   {
-    question: "When will this come out?",
-    answer: `We’re working diligently to roll this product out as soon as possible. But as you know, it’s difficult to
-       give an exact release date. The best way to stay updated is to sign up for our waitlist.`,
+    question: "How do you define AI safety?",
+    answer: `Our definition of AI safety comes from the Stanford consortium we're a part of, where we defined safety for AI agents as a three-pillar concept: Transparency, Accountability, and Trustworthiness. Our platform delivers on all three — our logging system provides transparency, our HITL workflows ensure accountability, and together they build the trustworthiness needed to deploy agents at scale.`,
   },
 ];
 

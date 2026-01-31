@@ -76,8 +76,8 @@ export default function Features() {
         <SingleFeature
           title={
             <>
-              <Pop>Specialized </Pop>
-              By Design
+              <Pop>Humans </Pop>
+              In The Loop
             </>
           }
           image="/2.webp"
@@ -85,20 +85,18 @@ export default function Features() {
           className="xl:flex-row-reverse"
         >
           <p>
-            Generic AI struggles in specialized domains. We’re building tools to
-            help you create a context-aware agent{" "}
-            <b>tailored to your environment.</b>
+            Autonomous agents shouldn&apos;t operate without oversight. When
+            critical decisions are made,{" "}
+            <b>someone needs to be accountable.</b>
             <br />
             <br />
-            It’s designed to learn your domain and <b>improve over time</b> by
-            adapting to real user interactions.
+            Our platform enables <b>human-in-the-loop workflows</b> so your
+            team can review, approve, or override agent actions in real time.
+            Built-in intervention points ensure nothing slips through unchecked.
             <br />
-            <br /> The result is an AI that knows what to ask, how to help, and
-            gets <b>smarter the more it’s used.</b>
+            <br /> The result is an AI that operates with{" "}
+            <b>trust, transparency, and accountability.</b>
           </p>
-          {/* <div className="w-full flex justify-center lg:block">
-            <Button className="w-fit" onClick={scrollToEmail}>Wassup</Button>
-          </div> */}
         </SingleFeature>
         <SingleFeature
           title={

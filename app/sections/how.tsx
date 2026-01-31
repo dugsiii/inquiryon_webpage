@@ -40,9 +40,7 @@ export default function How() {
         </div>
         <div className="absolute -bottom-32 sm:-bottom-48 w-full px-4 left-1/2 transform -translate-x-1/2 z-10">
           <div className="max-w-3xl mx-auto flex flex-col items-center gap-6">
-            <h3 className="text-secondary sm:text-transparent">Demo Video</h3>
-            <div className="w-full aspect-[3/2] bg-secondary z-10 rounded-md shadow-lg outline overflow-hidden">
-              <iframe
+            {/* <iframe
                 width="100%"
                 height="100%"
                 src="https://www.youtube.com/embed/3fHBW1esH98"
@@ -51,7 +49,12 @@ export default function How() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
-              />
+              /> */}
+            <div className="w-full aspect-[3/2] bg-secondary z-10 rounded-md shadow-lg outline overflow-hidden flex items-center justify-center">
+              <div className="text-center">
+                <h3 className="text-3xl sm:text-4xl font-sans-header text-secondary-foreground">Demo Video</h3>
+                <p className="text-lg text-secondary-foreground/60 mt-2">Coming Soon</p>
+              </div>
             </div>
           </div>
         </div>

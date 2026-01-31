@@ -52,25 +52,25 @@ export default function Features() {
         <SingleFeature
           title={
             <>
-              <Pop>Bridge </Pop>
-              The Gap
+              <Pop>Monitor </Pop>
+              Every Agent
             </>
           }
           image="/1.webp"
           imageAlt="Cleaving the Raw Gemstone"
         >
           <p>
-            AI is powerful, but only when it has the <b>right context</b>. When
-            users provide vague or incomplete prompts, the model is left
-            guessing. <br />
+            AI agents are powerful, but only when you can{" "}
+            <b>trust what they&apos;re doing</b>. Without visibility, autonomous
+            agents become black boxes.
             <br />
-            Our system acts as a buffer between the user and your LLM. It
-            automatically <b>detects missing information</b>, asks clarifying
-            questions, and injects the context needed to produce accurate and
-            useful results.
             <br />
-            <br /> No prompt engineering required.{" "}
-            <b>Just better answers, every time.</b>
+            Our platform lets you <b>log and audit</b> every agent interaction
+            in real time. Track decisions, flag anomalies, and maintain a full
+            record of agent behavior.
+            <br />
+            <br /> No guesswork required.{" "}
+            <b>Just full oversight, every time.</b>
           </p>
         </SingleFeature>
         <SingleFeature

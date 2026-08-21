@@ -6,21 +6,22 @@ import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Inquiryon",
+    default: "AMP by Inquiryon | Control for AI Agent Autonomy",
     template: "%s | Inquiryon",
   },
   description:
-    "AI that earns your trust.",
+    "AMP is the control layer for AI agent autonomy: policy enforcement, human oversight, auditability, escalation, and progressive autonomy after deployment.",
   keywords: [
-    "AI intent refinement",
-    "LLM",
-    "smart prompt",
-    "customer support AI",
+    "AI agent governance platform",
+    "AI agent control layer",
+    "post-launch governance",
+    "AI agent oversight",
+    "progressive autonomy",
   ],
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Inquiryon",
-    description: "AI that earns your trust.",
+    title: "AMP by Inquiryon | Control for AI Agent Autonomy",
+    description: "Policy enforcement, human oversight, and progressive autonomy for AI agents in production.",
     images: "/opengraph-image.png",
   },
   icons: {

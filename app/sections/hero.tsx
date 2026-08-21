@@ -12,15 +12,21 @@ export default function Hero() {
     <Section>
       <div className="flex flex-col lg:flex-row justify-center items-center py-20 md:py-30 lg:py-40 gap-10">
         <FadeInOnScroll>
-          <div className="flex flex-col my-auto max-w-lg gap-6">
+          <div className="flex flex-col my-auto max-w-2xl gap-6">
+            <p className="font-sans-header text-sm font-semibold uppercase tracking-[0.18em] text-dark-grey">
+              Post-launch governance for AI agents
+            </p>
             <h1 className="text-4xl md:text-5xl lg:text-7xl leading-tight lg:leading-20">
-            AI That Earns Your <Pop>Trust</Pop>
+              The control layer for AI agent <Pop>autonomy</Pop>
             </h1>
-          <p className="text-[1.075rem]">
-            AI shouldn’t run unchecked. <br />
-            Our human-in-the-loop agent <b>keeps you involved and in control</b>, adding the oversight needed for safe, trustworthy results.  
-            Join the waitlist* for early access and start building AI you can trust today!
-          </p>
+            <p className="text-[1.075rem] max-w-xl">
+              AMP sits between your agents and consequential actions—enforcing
+              policy, escalating exceptions, and turning proven performance
+              into progressively greater autonomy.
+            </p>
+            <p className="text-sm font-semibold text-dark-grey">
+              Control infrastructure for AI agents in production.
+            </p>
             <section className="your-section-style">
               <EmailSignup />
             </section>
@@ -32,7 +38,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className=" relative w-[600px] h-[480px] hidden lg:block">
+          <div className="relative w-[540px] h-[480px] hidden lg:block">
             <motion.div
               animate={{ y: [0, -12, 0] }}
               transition={{

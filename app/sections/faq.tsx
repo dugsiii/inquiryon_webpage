@@ -53,20 +53,24 @@ export function FAQItem({
 
 const faqText: { question: string; answer: string }[] = [
   {
-    question: "Who is this built for?",
-    answer: `Whether you're a team or an individual deploying AI agents, this is for you. If you need visibility into what your agents are doing, the ability to audit their decisions, and human oversight when it matters, our platform gives you the tools to deploy with confidence.`,
+    question: "What is AMP?",
+    answer: `AMP is the control layer for AI agent autonomy. It sits between agents and consequential actions, applying policy at runtime, routing exceptions for human review, and preserving the evidence behind every decision.`,
   },
   {
-    question: "Does this work with any AI agent or model?",
-    answer: `Yes, it's model-agnostic. Our platform sits as a layer on top of your existing agents, providing logging, auditing, and human-in-the-loop oversight regardless of the underlying model or framework.`,
+    question: "Is AMP an AI agent governance platform?",
+    answer: `Yes. AMP provides post-launch governance for AI agents in production. Unlike governance tools focused mainly on documentation, evaluations, or risk registers, AMP governs what agents are allowed to do while they are running.`,
   },
   {
-    question: "How is this different from other AI safety tools?",
-    answer: `Most safety tools focus on a single dimension — monitoring or guardrails. Our platform combines real-time logging, auditing, and human-in-the-loop intervention into one unified system, giving you full oversight without stitching together multiple solutions.`,
+    question: "Does every action require human approval?",
+    answer: `No. AMP is the decision layer that determines when human intervention is needed. Routine, policy-compliant actions can proceed automatically, while uncertain, high-risk, or exceptional actions are escalated with the context a reviewer needs.`,
   },
   {
-    question: "How do you define AI safety?",
-    answer: `Our definition of AI safety comes from the Stanford consortium we're a part of, where we defined safety for AI agents as a three-pillar concept: Transparency, Accountability, and Trustworthiness. Our platform delivers on all three — our logging system provides transparency, our HITL workflows ensure accountability, and together they build the trustworthiness needed to deploy agents at scale.`,
+    question: "How does progressive autonomy work?",
+    answer: `AMP records outcomes, policy decisions, reviewer approvals, overrides, and rollbacks. Teams can use that evidence to expand autonomy where an agent performs reliably and tighten controls where it does not.`,
+  },
+  {
+    question: "Does AMP work with any agent or model?",
+    answer: `AMP is designed as a model-agnostic control layer for existing agent systems, so governance is applied consistently even as the underlying models, tools, and frameworks change.`,
   },
 ];
 
@@ -77,7 +81,12 @@ export default function FAQ() {
     <Section>
       <FadeInOnScroll>
         <div className="flex flex-col py-8 sm:py-32 mx-auto items-center max-w-3xl gap-12">
-          <h2>FAQ</h2>
+          <div className="text-center">
+            <p className="mb-3 font-sans-header text-sm font-semibold uppercase tracking-[0.18em] text-dark-grey">
+              The operating layer
+            </p>
+            <h2>Questions about AMP</h2>
+          </div>
           <div className="flex flex-col gap-2 w-full">
             {faqText.map((faq, index) => (
               <FAQItem

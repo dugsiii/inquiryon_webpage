@@ -10,11 +10,13 @@ export default function About() {
       <div className="flex flex-col py-16 gap-12 items-center text-primary-foreground">
         <FadeInOnScroll>
           <div className="flex flex-col items-center gap-4">
-            <h2>About</h2>
-            <p className="max-w-lg">
-              We exist to help <b>everyday people</b> connect with technology in
-              order to unlock it’s potential. In doing so, we bridge gaps in
-              understanding and build a more inclusive, innovative tomorrow.
+            <h2>Why Inquiryon</h2>
+            <p className="max-w-2xl text-center">
+              AI agents will only become more capable. We believe autonomy
+              should grow with evidence—not assumptions. Inquiryon is building
+              the control infrastructure that lets organizations deploy agents
+              with clear policy, accountable decisions, and a path to greater
+              independence.
             </p>
           </div>
         </FadeInOnScroll>
@@ -39,10 +41,10 @@ export default function About() {
                 </div>
               </div>
               <p className="max-w-xs sm:max-w-lg">
-                Hi I’m Jeshua! I’ve always been passionate about AI, not just as
-                a technology, but as a tool to <b>empower people</b>. I founded
-                Inquiryon to make AI more intuitive, in order to simplify lives
-                and make a meaningful impact.
+                Hi, I&apos;m Jeshua. I founded Inquiryon to help organizations put
+                capable AI agents into production without giving up control.
+                AMP brings policy, human judgment, and operational evidence
+                together so teams can expand autonomy responsibly.
               </p>
             </div>
           </div>

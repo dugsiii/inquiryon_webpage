@@ -23,3 +23,17 @@ Starting up the the dev server:
 ```
 npm run dev
 ```
+
+### Resend setup
+
+Create an `AMP Waitlist` segment in the Resend dashboard, then configure these
+server-side environment variables locally and in the deployment environment:
+
+```text
+RESEND_API_KEY=re_...
+RESEND_WAITLIST_SEGMENT_ID=...
+```
+
+The segment ID is available in the segment page URL in Resend. Early-access
+submissions are saved as Contacts in this segment before the confirmation email
+is sent. The sending domain `mail.inquiryon.com` must also be verified in Resend.

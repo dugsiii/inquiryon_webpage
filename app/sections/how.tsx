@@ -1,64 +1,53 @@
 "use client";
 import Section from "@/components/section";
 import FadeInOnScroll from "@/components/fadeInOnScroll";
-import AgentsDisplay from "./components/agents/agentsDisplay";
+
+const outcomes = [
+  {
+    number: "01",
+    title: "Control",
+    text: "Evaluate every consequential action against your policies, permissions, and operating context before it executes.",
+  },
+  {
+    number: "02",
+    title: "Oversight",
+    text: "Let routine actions proceed. Route uncertain, high-risk, or exceptional decisions to the right human reviewer.",
+  },
+  {
+    number: "03",
+    title: "Earned autonomy",
+    text: "Use outcomes and reviewer decisions as evidence to safely expand what each agent can do on its own.",
+  },
+];
 
 export default function How() {
-  // const [selectedStage, setSelectedStage] = useState(0);
-
-  // const stepsText = [
-  //   {
-  //     stage: "Q&A",
-  //     title: "Local Context",
-  //     text: "Integrate lightweight Q&A capabilities  into your AI agent or Web application, allowing it to ask simple follow-up questions based solely on the current conversation.",
-  //   },
-  //   {
-  //     stage: "Context",
-  //     title: "Context-aware intelligence",
-  //     text: "Go beyond single-session prompts. Leverage environmental context to help your agent or Web application understands users better and respond with greater precision.",
-  //   },
-  //   {
-  //     stage: "CAPE",
-  //     title: "Domain-Specific Knowledge",
-  //     text: "Understand more than just the context, understand the problem space. Tap into domain knowledge and group context, ask expert level questions and give amazing results.",
-  //   },
-  // ];
-
   return (
-    <>
-      <Section className="bg-primary relative pb-64 sm:pb-96">
-        <div className="flex flex-col items-center text-primary-foreground py-20 gap-4 sm:gap-16">
-          <FadeInOnScroll>
-            <h2 className="text-4xl sm:text-5xl text-center mb-1">
-              Safe Agents for All You Needs
-            </h2>
-            <p className="text-md font-semibold text-center mb-8">
-              Click on an Agent to find out more!
+    <Section className="bg-primary">
+      <div className="py-20 sm:py-28 text-primary-foreground">
+        <FadeInOnScroll>
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="mb-4 font-sans-header text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+              One decision layer. Every agent action.
             </p>
-          </FadeInOnScroll>
-          <AgentsDisplay />
-        </div>
-        <div className="absolute -bottom-32 sm:-bottom-48 w-full px-4 left-1/2 transform -translate-x-1/2 z-10">
-          <div className="max-w-3xl mx-auto flex flex-col items-center gap-6">
-            {/* <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/3fHBW1esH98"
-                title="Demo Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              /> */}
-            <div className="w-full aspect-[3/2] bg-secondary z-10 rounded-md shadow-lg outline overflow-hidden flex items-center justify-center">
-              <div className="text-center">
-                <h3 className="text-3xl sm:text-4xl font-sans-header text-secondary-foreground">Demo Video</h3>
-                <p className="text-lg text-secondary-foreground/60 mt-2">Coming Soon</p>
-              </div>
-            </div>
+            <h2 className="text-4xl sm:text-5xl">Autonomy should be earned</h2>
+            <p className="mx-auto mt-6 max-w-2xl text-primary-foreground/80">
+              AMP governs what agents are allowed to do while they are running—not
+              just how they were evaluated before launch.
+            </p>
           </div>
+        </FadeInOnScroll>
+        <div className="mt-14 grid gap-5 lg:grid-cols-3">
+          {outcomes.map((outcome) => (
+            <FadeInOnScroll key={outcome.number}>
+              <div className="h-full rounded-xl border border-primary-foreground/20 bg-secondary/5 p-7">
+                <span className="font-sans-header text-sm text-accent">{outcome.number}</span>
+                <h3 className="mt-7 text-3xl">{outcome.title}</h3>
+                <p className="mt-4 text-primary-foreground/75">{outcome.text}</p>
+              </div>
+            </FadeInOnScroll>
+          ))}
         </div>
-      </Section>
-    </>
+      </div>
+    </Section>
   );
 }

@@ -55,7 +55,7 @@ export default function Navbar() {
           onClick={scrollToEmail}
           variant={`${scrolled ? "blue" : "default"}`}
         >
-          Join Waitlist
+          Request Access
         </Button>
       </div>
     </div>

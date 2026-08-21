@@ -45,79 +45,72 @@ function SingleFeature({
 export default function Features() {
   return (
     <Section
-      className="pt-64 sm:pt-96 pb-48 sm:pb-64 scroll-mt-neg-20"
+      className="py-24 sm:py-36 scroll-mt-neg-20"
       id="features"
     >
       <div className="flex flex-col items-center gap-48">
         <SingleFeature
           title={
             <>
-              <Pop>Monitor </Pop>
-              Every Agent
+              Govern actions <Pop>in real time</Pop>
             </>
           }
           image="/1.webp"
-          imageAlt="Cleaving the Raw Gemstone"
+          imageAlt="A raw gemstone being precisely shaped"
         >
           <p>
-            AI agents are powerful, but only when you can{" "}
-            <b>trust what they&apos;re doing</b>. Without visibility, autonomous
-            agents become black boxes.
+            AMP sits between the agent and the systems it can change. Each
+            proposed action is checked against <b>policy, permissions, risk, and context</b>
+            before it proceeds.
             <br />
             <br />
-            Our platform lets you <b>log and audit</b> every agent interaction
-            in real time. Track decisions, flag anomalies, and maintain a full
-            record of agent behavior.
+            Allow safe actions automatically, block prohibited ones, and keep a
+            complete record of what was requested, decided, and executed.
             <br />
             <br /> No guesswork required.{" "}
-            <b>Just full oversight, every time.</b>
+            <b>Operational control at the moment it matters.</b>
           </p>
         </SingleFeature>
         <SingleFeature
           title={
             <>
-              <Pop>Humans </Pop>
-              In The Loop
+              Escalate with <Pop>context</Pop>
             </>
           }
           image="/2.webp"
-          imageAlt="Blueprint Diagram of final Gemstone"
+          imageAlt="A blueprint used to review a gemstone design"
           className="xl:flex-row-reverse"
         >
           <p>
-            Autonomous agents shouldn&apos;t operate without oversight. When
-            critical decisions are made,{" "}
-            <b>someone needs to be accountable.</b>
+            Human review is not the default for every action. It is a targeted
+            response when <b>risk, uncertainty, or policy requires judgment.</b>
             <br />
             <br />
-            Our platform enables <b>human-in-the-loop workflows</b> so your
-            team can review, approve, or override agent actions in real time.
-            Built-in intervention points ensure nothing slips through unchecked.
+            AMP routes exceptions to the right reviewer with the evidence they
+            need to approve, reject, modify, or roll back an action quickly.
             <br />
             <br /> The result is an AI that operates with{" "}
-            <b>trust, transparency, and accountability.</b>
+            <b>Less review overhead. Better decisions.</b>
           </p>
         </SingleFeature>
         <SingleFeature
           title={
             <>
-              Deploy With
-              <Pop> Confidence </Pop>
+              Expand <Pop>autonomy safely</Pop>
             </>
           }
           image="/3.webp"
-          imageAlt="Necklace with Final Gemstones set in the shape of the Inquiryon Logo."
+          imageAlt="Finished gemstones arranged in the Inquiryon mark"
         >
           <p>
-            When your agents are logged, audited, and supervised, they become
-            more than just autonomous.{" "}
-            <b>They become reliable.</b>
+            Every decision creates evidence: agent performance, policy outcomes,
+            reviewer choices, overrides, and rollbacks. AMP turns that history
+            into a basis for <b>earned autonomy.</b>
             <br />
             <br />
-            Our platform <b>expands what&apos;s possible</b> by giving you the
-            confidence to deploy agents at scale — knowing every action is
-            tracked, every decision is reviewable, and a human is always one
-            step away.
+            Expand permissions where performance is proven. Tighten controls
+            where it is not. Give each agent exactly as much freedom as the
+            evidence supports.
           </p>
         </SingleFeature>
       </div>

@@ -9,7 +9,7 @@ import Pop from "@/components/ui/pop";
 import EmailSignup from './components/emailSignup';
 export default function Hero() {
   return (
-    <Section>
+    <Section id="early-access" className="scroll-mt-16 sm:scroll-mt-20">
       <div className="flex flex-col lg:flex-row justify-center items-center py-20 md:py-30 lg:py-40 gap-10">
         <FadeInOnScroll>
           <div className="flex flex-col my-auto max-w-2xl gap-6">

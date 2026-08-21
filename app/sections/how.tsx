@@ -47,6 +47,32 @@ export default function How() {
             </FadeInOnScroll>
           ))}
         </div>
+        <FadeInOnScroll>
+          <div className="mt-10 flex flex-col items-center justify-center gap-3 text-center text-sm text-primary-foreground/65 sm:flex-row sm:gap-5">
+            <span>
+              Informed by our work with{" "}
+              <a
+                href="https://saia.stanford.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-primary-foreground/30 underline-offset-4 transition-colors hover:text-accent"
+              >
+                Stanford SAIA
+              </a>
+            </span>
+            <span className="hidden text-primary-foreground/25 sm:inline" aria-hidden="true">
+              /
+            </span>
+            <a
+              href="https://saia.stanford.edu/sites/g/files/sbiybj35651/files/media/file/inquiryon_amp_agent_governance_article_0_0.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans-header font-semibold text-primary-foreground transition-colors hover:text-accent"
+            >
+              Read Our Approach →
+            </a>
+          </div>
+        </FadeInOnScroll>
       </div>
     </Section>
   );
